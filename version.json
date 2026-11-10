@@ -6,7 +6,7 @@
   "pcb_included": true,
   "schematic_included": true,
   "footprint_included": true,
-  "github_remote_set": true,
+  "github_remote_set": false,
   "erc_tested": false,
   "drc_tested": false,
   "rj45_pad_numbers_validated": true,
@@ -55,5 +55,7 @@
     "reference": "development/v2/README.md",
     "cost_review": "development/v2/DEVELOPMENT_AND_COST_SCOPE_JA.md",
     "approval": "review_only"
-  }
+  },
+  "github_sync_via_connector_confirmed": true,
+  "rj45_pad_numbers_validated_scope": "design_static_only; physical jack orientation and pin1 not validated"
 }
