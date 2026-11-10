@@ -60,3 +60,7 @@
 - 今回アップロードされた `VoiceMemory_v1_ECO_2026-10-30_KiCad10(1).zip` の実バイト列
 - GitHubブランチ `fix/v1-cap-min0805-2026-11-10` の再帰ツリー（各Blob SHA）
 - `hardware/reports/CAP_MIN_0805_2026-11-10_JA.md`
+
+## 2026-11-11 最新の管理区分
+
+ユーザー指定：**2026-10-30 ZIPはv1試作・製造検証用基準、費用計算不要**。後続の2026-11-10レビュー設計は**v2現行開発データ**とする。旧ZIPと現行KiCadのハッシュ比較自体は変更しない。案内は [v1試作資料](../../releases/v1-prototype/README.md) と [v2開発資料](../../development/v2/README.md) に分離する。

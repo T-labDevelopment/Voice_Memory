@@ -1,22 +1,28 @@
-# VoiceMemory v1 — KiCad基準データとファームウェア仕様資料
+# Voice_Memory — バージョン別設計資料
 
-**最新受領KiCadデータ: 2026-10-29**
+**現在の開発対象：v2（2026-11-10基準のKiCad 10レビュー版）**
 
-- `hardware/kicad/voicememory/`: 今回ユーザーから受領したKiCad 10プロジェクト（回路図・PCB・ライブラリ）。
-- `hardware/source-archives/voicememory-2026-10-05_162836(2).zip`: ユーザー提供の元ZIP。元データをそのまま保存。
-- `hardware/kicad/voicememory/README_JA.md`: 実データと過去の設計指示との差分・注意事項。
-- `hardware/reports/RECEIPT_2026-10-29_JA.md`: 受領記録とチェックサム。
-- `docs/firmware-hardware/v1/`: 旧資料によるファームウェア開発者向け仕様書。最新KiCadと差分があるため再照合必須。
-- `Voice_Memory.pretty/`: **旧参照用**のRJ45フットプリント。最新受領プロジェクトを開く際は `hardware/kicad/voicememory/Voice_Memory.pretty/` を使用する。
+プロジェクトの設計データは**v1試作版**と**v2現行開発版**に分けて管理します。旧v1を現在の設計に上書きせず、製造検証のために独立参照します。
 
-`v1` は過去の部分的な参照仕様のGitタグ。`v1-data-2026-10-29` が最新受領された**実KiCadデータを含む**記録タグ。既存タグは書き換えない。
+| 版 | 目的・状態 | 参照先 |
+|---|---|---|
+| **v1** | **試作・製造検証用の旧基準版**。2026-10-30リリースZIP。**費用計算不要**。未製造承認 | **[v1試作・製造検証資料](releases/v1-prototype/README.md)** |
+| **v2** | **現在の開発・回路修正・検証対象**。11月10日コンデンサECOを含む。未製造承認 | **[v2開発・技術仕様](development/v2/README.md)** |
+| v2費用 | v2の開発・試作費と必要条件。未確定額を分離 | [v2費用・必要仕様](development/v2/DEVELOPMENT_AND_COST_SCOPE_JA.md) |
 
-**ERC/DRC未実施。実基板の製造適合・実機動作を保証しない。**
+## 設計データを開く場合
 
-## 2026-11-11 図版の追加補完
+- **現行v2の回路図・PCB：** [`hardware/kicad/voicememory/`](hardware/kicad/voicememory/)
+- **現行v2の技術監査：** [11月10日コンデンサ・フットプリント監査](hardware/reports/CAP_MIN_0805_2026-11-10_JA.md)
+- **旧v1原本の照合記録：** [10月30日ZIPとのハッシュ比較](hardware/reports/ECO_ZIP_RECEIPT_COMPARE_2026-11-11_JA.md)
+- **FW開発資料：** [旧版仕様書と更新補足](docs/firmware-hardware/v1/README.md)。旧版資料には世代差があり、v2の実装時は回路図を優先する。
+- **履歴バックアップ：** [`history/`](history/README.md)
 
-旧ファームウェア仕様書でリンク切れになっていた主要な4図について、KiCadと仕様書を基に説明用SVG図を追加した。**旧PNGやRJ45現物写真の原本を復元したものではない。** 補完・未回収画像の一覧は [FIGURES_RECOVERY_2026-11-11_JA.md](docs/firmware-hardware/v1/FIGURES_RECOVERY_2026-11-11_JA.md) を参照。仕様書のMarkdown版の図リンクは更新済み、歴史的版PDF/DOCXは未再出力。
+> **注意：** v1の原本ZIP `VoiceMemory_v1_ECO_2026-10-30_KiCad10(1).zip` 自体はまだGitHub上へ同一バイナリとして保存されていません。原本のSHAと内容はv1索引に記録済み。GitHubの現行 `.kicad_sch`・`.kicad_pcb` は**v2の改修データ**なので、v1原本として流用しないでください。
 
-## 旧v1リリース版の区分（2026-11-11確定）
+## Gitの取り扱い
 
-ユーザー指定により `VoiceMemory_v1_ECO_2026-10-30_KiCad10(1).zip` は**旧v1のリリース版**とする。現行の2026-11-10コンデンサ見直し版とは別基準として保存し、旧版を現行設計へ上書きしない。旧版の同定・SHA-256・登録状況は [旧v1リリース版の保存基準](releases/legacy-v1-2026-10-30/README.md) を参照。元ZIPのGitHub登録は未完了。製造適合は未検証。
+- 開発ブランチ：`develop/v2`。このブランチの `version.json` は `v2`。
+- 従来の `fix/v1-cap-min0805-2026-11-10` は変更履歴として残す。過去コミット、bundle、既存タグの書換えはしない。
+- `main` は未統合。統合は明示的な指示後に行う。
+- **KiCad 10 ERC/DRC、GNDゾーン再フィル、実機検証は未完了。Gerber出力や製造適合の判定は保留。**

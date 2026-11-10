@@ -1,18 +1,18 @@
 {
-  "version": "v1",
+  "version": "v2",
   "created_on": "2026-10-28",
-  "scope": "complete received KiCad 10 project + v1-eco-2026-10-30 + sourcing-driven capacitor ECO",
+  "scope": "current V2 KiCad 10 project: Oct-30 V1 prototype ECO plus Nov-10 capacitor sourcing and footprint review",
   "source_archive_expected": "voicememory-2026-10-05_162836.zip",
   "pcb_included": true,
   "schematic_included": true,
   "footprint_included": true,
-  "github_remote_set": false,
+  "github_remote_set": true,
   "erc_tested": false,
   "drc_tested": false,
   "rj45_pad_numbers_validated": true,
   "rj45_fixed_holes": 2,
   "rj45_footprint_sha256": "4318124ba7ea44a1c2b61f613b437c371bd3209fa0c6b4a4dd9daf96c8b6e33d",
-  "revision": "v1-cap-min0805-review-2026-11-10",
+  "revision": "v2-cap-min0805-review-2026-11-10",
   "full_kicad_project_included": true,
   "rj45_fix_applied_in_sch_pcb_library": true,
   "c11_c19_0603_pcb_applied": false,
@@ -20,7 +20,7 @@
   "u3_tlp592a_applied": true,
   "zone_refill_required": true,
   "manufacturing_approved": false,
-  "base_revision": "v1-cap-sourcing-2026-11-10",
+  "base_revision": "legacy-v1-prototype-2026-10-30",
   "capacitor_refs_changed": [
     "C2",
     "C4",
@@ -37,5 +37,23 @@
   "capacitor_bom_verified": "Akizuki and Sengoku catalog listings checked 2026-11-10; stock confirm at purchase; no purchase made",
   "min_smd_footprint": "0805 (2012 Metric)",
   "pcb_clearance_conflicts_detected": true,
-  "pcb_manufacturing_approved": false
+  "pcb_manufacturing_approved": false,
+  "version_assigned_on": "2026-11-11",
+  "release_stage": "development_review_not_manufacturing_approved",
+  "legacy_v1": {
+    "role": "prototype_and_manufacturing_verification_reference",
+    "archive_name": "VoiceMemory_v1_ECO_2026-10-30_KiCad10(1).zip",
+    "archive_sha256": "4701e9fb30755c0f9fe3589d3cfbdebf8b4f2a751e774f449c357264064692ce",
+    "github_archive_uploaded": false,
+    "cost_calculation_required": false,
+    "reference": "releases/v1-prototype/README.md"
+  },
+  "v2": {
+    "role": "current_development_data",
+    "baseline_date": "2026-11-10",
+    "branch": "develop/v2",
+    "reference": "development/v2/README.md",
+    "cost_review": "development/v2/DEVELOPMENT_AND_COST_SCOPE_JA.md",
+    "approval": "review_only"
+  }
 }
