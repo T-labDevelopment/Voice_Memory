@@ -1,0 +1,51 @@
+{
+  "footprints": 62,
+  "segments": 455,
+  "vias": 154,
+  "new_hole_clearance": [
+    {
+      "ref": "J1",
+      "hole_xy": [
+        118.956,
+        43.1522
+      ],
+      "closest_copper_trace_edge_mm": 1.916,
+      "closest_copper_trace_net": "MIC_AUDIO",
+      "closest_via_edge_mm": 0.972,
+      "closest_via_net": "GND_AUD"
+    },
+    {
+      "ref": "J1",
+      "hole_xy": [
+        106.256,
+        43.1522
+      ],
+      "closest_copper_trace_edge_mm": 0.352,
+      "closest_copper_trace_net": "MIC_DC_PASS",
+      "closest_via_edge_mm": 2.25,
+      "closest_via_net": "GND_AUD"
+    },
+    {
+      "ref": "J2",
+      "hole_xy": [
+        88.956,
+        43.1542
+      ],
+      "closest_copper_trace_edge_mm": 0.354,
+      "closest_copper_trace_net": "MIC_DC_PASS",
+      "closest_via_edge_mm": 0.333,
+      "closest_via_net": "GND_AUD"
+    },
+    {
+      "ref": "J2",
+      "hole_xy": [
+        76.256,
+        43.1542
+      ],
+      "closest_copper_trace_edge_mm": 0.755,
+      "closest_copper_trace_net": "MIC_DOWN",
+      "closest_via_edge_mm": 0.654,
+      "closest_via_net": "MIC_DOWN"
+    }
+  ]
+}

@@ -1,7 +1,14 @@
-# Voice_Memory
+# VoiceMemory v1 — KiCad基準データとファームウェア仕様資料
 
-HK829代替ボイスメモリー開発プロジェクト。
+**最新受領KiCadデータ: 2026-10-29**
 
-設計ファイル・BOM・ファームウェア担当者向け資料は作業ブランチ `fix/v1-cap-min0805-2026-11-10` で管理しています。PCBはレビュー段階であり、KiCad 10の正式ERC/DRC・GNDゾーン再フィルは未実施です。
+- `hardware/kicad/voicememory/`: 今回ユーザーから受領したKiCad 10プロジェクト（回路図・PCB・ライブラリ）。
+- `hardware/source-archives/voicememory-2026-10-05_162836(2).zip`: ユーザー提供の元ZIP。元データをそのまま保存。
+- `hardware/kicad/voicememory/README_JA.md`: 実データと過去の設計指示との差分・注意事項。
+- `hardware/reports/RECEIPT_2026-10-29_JA.md`: 受領記録とチェックサム。
+- `docs/firmware-hardware/v1/`: 旧資料によるファームウェア開発者向け仕様書。最新KiCadと差分があるため再照合必須。
+- `Voice_Memory.pretty/`: **旧参照用**のRJ45フットプリント。最新受領プロジェクトを開く際は `hardware/kicad/voicememory/Voice_Memory.pretty/` を使用する。
 
-既存のローカルGit履歴およびタグは作業ブランチ内 `history/` のbundleに保全しています。GitHub上のスナップショット用コミットは元のGit履歴と別のSHAになります。
+`v1` は過去の部分的な参照仕様のGitタグ。`v1-data-2026-10-29` が最新受領された**実KiCadデータを含む**記録タグ。既存タグは書き換えない。
+
+**ERC/DRC未実施。実基板の製造適合・実機動作を保証しない。**

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "Voice_Memory")(type "KiCad")(uri "${KIPRJMOD}/Voice_Memory.pretty")(options "")(descr "HK829 voice memory local custom footprints"))
+)

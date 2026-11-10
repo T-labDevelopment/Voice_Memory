@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-10",
+  "base": "v1-eco-2026-10-30",
+  "modifications": [
+    {
+      "ref": "C2",
+      "from": "1uF/25V X5R",
+      "to": "1uF/25V X6S",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "VBAT_SW",
+        "GND_AUD"
+      ]
+    },
+    {
+      "ref": "C4",
+      "from": "1uF/25V X5R",
+      "to": "1uF/25V X6S",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "+3V3",
+        "GND_AUD"
+      ]
+    },
+    {
+      "ref": "C7",
+      "from": "0.1uF/50V",
+      "to": "0.1uF/100V X7R",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "+3V3",
+        "GND_AUD"
+      ]
+    },
+    {
+      "ref": "C8",
+      "from": "0.1uF/50V",
+      "to": "0.1uF/100V X7R",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "+3V3",
+        "GND_AUD"
+      ]
+    },
+    {
+      "ref": "C10",
+      "from": "0.1uF/50V",
+      "to": "0.1uF/100V X7R",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "+3V3",
+        "GND_AUD"
+      ]
+    },
+    {
+      "ref": "C14",
+      "from": "0.1uF/50V",
+      "to": "0.1uF/100V X7R",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "AUDIO_ADC",
+        "VREF"
+      ]
+    },
+    {
+      "ref": "C15",
+      "from": "0.1uF/50V",
+      "to": "0.1uF/100V X7R",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "PWM_F1",
+        "GND_AUD"
+      ]
+    },
+    {
+      "ref": "C16",
+      "from": "0.1uF/50V",
+      "to": "0.1uF/100V X7R",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "PWM_F2",
+        "GND_AUD"
+      ]
+    },
+    {
+      "ref": "C17",
+      "from": "0.1uF/50V",
+      "to": "0.1uF/100V X7R",
+      "new_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "retained_net_names": [
+        "PTT_SENSE_MCU",
+        "GND_AUD"
+      ]
+    }
+  ],
+  "sources": {
+    "0.1uF": "https://akizukidenshi.com/catalog/g/g114559/",
+    "1uF": "https://akizukidenshi.com/catalog/g/g116993/"
+  },
+  "limitations": [
+    "KiCad 10 official ERC/DRC not available in environment",
+    "GND copper zone is unfilled in source and must be refilled using KiCad",
+    "Direct copper attachment of some legacy pads was already absent and needs review",
+    "Physical solderability/trace spacing not verified by official DRC"
+  ]
+}

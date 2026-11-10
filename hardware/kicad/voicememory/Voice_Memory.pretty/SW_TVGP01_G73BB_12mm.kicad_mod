@@ -1,0 +1,190 @@
+(footprint "SW_TVGP01_G73BB_12mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Zhejiang Jianfu TVGP01-G73BB 12x12x7.3mm THT tact switch; 4x drill 1.3mm, pitch 5.0 x 12.5mm")
+	(tags "TVGP01 tact switch 12mm")
+	(property "Reference" "REF**"
+		(at 0 -8.1 0)
+		(layer "F.SilkS")
+		(uuid "794ead98-77d7-51bd-8456-e7bd256f7dd6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_TVGP01_G73BB_12mm"
+		(at 0 8.1 0)
+		(layer "F.Fab")
+		(uuid "3f1c57bb-5027-5ad1-8735-90492225690b")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f728c204-10b3-42a9-92ec-980f340a7fe9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6df89c2d-f7af-451f-83c2-b224ef24dad5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -5.9944 -5.9944)
+		(end -5.9944 5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "875b579b-200c-4908-b47e-d12611c23baa")
+	)
+	(fp_line
+		(start -5.9944 5.9944)
+		(end -3.6576 5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "37eca51b-1d54-4567-b37b-96b8522c9cf2")
+	)
+	(fp_line
+		(start -3.6576 -5.9944)
+		(end -5.9944 -5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ed04bac9-6cd1-434f-93a2-3a995cba57fd")
+	)
+	(fp_line
+		(start -1.3208 5.9944)
+		(end 1.3716 5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0d2085db-c797-4f1f-9a5a-343f538c7894")
+	)
+	(fp_line
+		(start 1.3716 -5.9944)
+		(end -1.3208 -5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "72949d44-299c-4027-8927-c0e1bfba0c5b")
+	)
+	(fp_line
+		(start 3.6576 5.9944)
+		(end 5.9944 5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "751e0c72-bd4e-4f0c-8e54-5772c1faae6f")
+	)
+	(fp_line
+		(start 5.9944 -5.9944)
+		(end 3.6576 -5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "5526f27f-4f45-455a-90ae-a1769ae2a830")
+	)
+	(fp_line
+		(start 5.9944 5.9944)
+		(end 5.9944 -5.9944)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "31fe2f6c-4e68-417d-885f-0ec0b9b676ac")
+	)
+	(fp_rect
+		(start -6.6 -6.75)
+		(end 6.6 6.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "5822744d-e184-536c-9bf0-d52354780417")
+	)
+	(fp_rect
+		(start -6 -6)
+		(end 6 6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b7c37f60-aa22-5847-b18a-3526aecede90")
+	)
+	(pad "1" thru_hole rect
+		(at -2.5 -6.25)
+		(size 2.2 2.2)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6acc32d5-1324-58b8-b7f8-53ccf2044050")
+	)
+	(pad "1" thru_hole circle
+		(at -2.5 6.25)
+		(size 2.2 2.2)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1917099e-a276-5e03-87d7-ec4193d90e66")
+	)
+	(pad "2" thru_hole circle
+		(at 2.5 -6.25)
+		(size 2.2 2.2)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a72fbaa6-6b6f-55be-b568-34734ae19eed")
+	)
+	(pad "2" thru_hole circle
+		(at 2.5 6.25)
+		(size 2.2 2.2)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ae32a9c3-f07a-5694-a7e0-de909c8c0e6c")
+	)
+	(embedded_fonts no)
+)
