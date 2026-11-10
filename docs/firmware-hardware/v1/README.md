@@ -1,42 +1,40 @@
 # VoiceMemory v1 — ファームウェア開発者向けハード仕様資料
 
-**作成日：2026-10-29／文書版：v1-FW-HW-1.0**
+**作成日：2026-10-29／文書版：v1-FW-HW-1.0／図版補足：2026-11-11**
 
-> **2026-11-11追記**：本資料は作成当時のv1参照仕様であり、最新の2026-11-10レビュー用KiCadデータにすべて追従したものではありません。最新の部品変更・設計未解決事項は `../../../hardware/reports/CAP_MIN_0805_2026-11-10_JA.md`、回路・PCBの実ファイルは `../../../hardware/kicad/voicememory/` を優先してください。GitHubでの取込・欠落ファイル・元のGit履歴に関する状況は `../../GITHUB_SYNC_AUDIT_2026-11-11_JA.md` に記録しました。
+本ディレクトリにある文書の基準は2026-10-29の保存仕様であり、**製造用の最新回路仕様と同義ではありません**。
 
-## 最初に読むファイル
+## 利用順序
 
-- `VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書_CID.pdf`：日本語CIDフォントを使用した配布用PDF。
-- `VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書.docx`：編集できるWord版。
-- `VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書.md`：Git差分管理用テキスト版。
+1. [図版修復・原本欠落の一覧](FIGURES_RECOVERY_2026-11-11_JA.md) を確認する。
+2. [開発者向け仕様書（Markdown版）](VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書.md) を読む。**図1～4のリンクは実在SVGへ差し替え済み**。
+3. 配布・編集用の `VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書_CID.pdf` と `VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書.docx` は2026-10-29作成時点の歴史的版であり、今回の図版修復を反映した再出力ではない。
+4. [最新KiCadプロジェクト](../../../hardware/kicad/voicememory/) と [2026-11-10コンデンサ監査](../../../hardware/reports/CAP_MIN_0805_2026-11-10_JA.md) を正として照合する。
 
-## 作成時の添付資料一覧（旧ZIPの記録）
+## 今回GitHubへ追加した再構成図
 
-以下の `figures/` の画像6件は、**2026-11-11時点のGitHubブランチに独立ファイルとして格納されていません**。現行ツリーに存在するものとして参照しないでください。
+- [システムブロック図](figures/01_system_block.svg)
+- [録音／再生の信号経路](figures/02_audio_paths.svg)
+- [リレー接点／自動PTT](figures/03_relay_ptt.svg)
+- [RJ45現行KiCadフットプリント座標図](figures/rj45_footprint_layout.svg)
 
-- `figures/01_system_block.png`：回路ブロック／制御・信号経路。
-- `figures/02_audio_paths.png`：録音ADC／再生PWM経路。
-- `figures/03_relay_ptt.png`：K1の接点、PhotoMOS、PTT制御。
-- `figures/legacy_block_diagram_20261025.png`：先行回路説明図（9月保存SCH参照）。
-- `figures/legacy_network_details_20261025.png`：先行端子・ネット接続詳細図。
-- `figures/rj45_footprint_layout.png`：RJ45修正フットプリント図。
+**これらは図の意図を最新資料と保存SCHネット名から再構成した解説図で、旧PNGファイルの原本ではありません。** 回路配線の製造検証・実物の向き確認の代用にはできません。
 
-確認済みの格納物・注意事項：
+## 未回収の旧原本
 
-- `Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod`：当時の修正フットプリント。**最新のKiCadプロジェクト内蔵版を優先**。
-- `sources/`：`KICAD_APPLICATION_STATUS_JA.md` および `V1_BASELINE_JA.md` が存在する。旧ZIPで列挙したRJ45寸法図PNGと部品写真JPEGは現行GitHubブランチで**未収録**。
-- `pinmap_CH32V003F4P6_legacySCH.csv`：旧SCHネット名を抽出した20ピン表。**現PCBとは未照合**。
-- `manifest_sha256.json`：旧ZIPで意図したファイル一覧とチェックサム。**現在のGitHubツリーと一致しない項目がある**。
+- `figures/legacy_block_diagram_20261025.png`
+- `figures/legacy_network_details_20261025.png`
+- `sources/RJ45_PCB_LAYOUT_寸法図.png`
+- `sources/RJ45_部品裏面参考写真.jpeg`
 
-## 重要な制約
+元の `figures/01_system_block.png`、`figures/02_audio_paths.png`、`figures/03_relay_ptt.png`、`figures/rj45_footprint_layout.png` も**別名のSVGで代替**しただけで、元PNG自体は取得できていません。
 
-作成当時の文書ZIPには、2026-10-05基準のKiCad正本 `.kicad_sch` / `.kicad_pcb` / 全ライブラリが含まれていませんでした。その後、ユーザー提供KiCadデータが別途受領・GitHubブランチへ格納され、現在は `../../../hardware/kicad/voicememory/` に存在します。ただし正式ERC/DRCおよび実機検証は未実施です。
+`manifest_sha256.json` は元の文書ZIPの期待ハッシュを記録した史料として変更していません。
 
-特にU2（AT25SF321B／W25Q32RV）、U3（AQV212／TLP592A）、U4（NJM2732D／MCP6002）、R20値、C2・C4・C18等の回路世代差は本文書で明記しています。ファームウェア確定実装前に、最新KiCadと現物を照合してください。
+## その他の仕様と状態
 
-## バージョンとGit
-
-- ハードウェア基準タグ `v1` は当時の参照仕様記録。元のローカル履歴は `history/` のGit bundle分割ファイルとして保存しています。
-- この文書を含む設計のGitHubスナップショットは `fix/v1-cap-min0805-2026-11-10` に登録済みです。
-- 元のローカルGit履歴のコミットSHAとタグがGitHubの通常の履歴へすべて移植されたわけではありません。
-- `main` への統合は未実施。設計の製造可能性を保証しません。
+- 現PCBと、2026-09-30保存SCHを用いた当時のピン表 `pinmap_CH32V003F4P6_legacySCH.csv` は完全一致未検証。
+- U2、U3、C11/C19、R20等は回路世代差があるので、2026-11-10現行KiCadを優先する。
+- キー操作、PTT動作、RTC等はファームウェア側で実装前照合。
+- **ERC/DRC、ゾーン再フィル、物理ジャック端子番号の現物照合は未完了。製造可能とは判定しない。**
+- [GitHub同期監査記録](../../GITHUB_SYNC_AUDIT_2026-11-11_JA.md) を参照。

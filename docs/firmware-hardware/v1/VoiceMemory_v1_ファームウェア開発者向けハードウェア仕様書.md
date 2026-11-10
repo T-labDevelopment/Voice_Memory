@@ -1,3 +1,5 @@
+> **2026-11-11補足:** 図1～図4の画像リンクを、GitHubで参照できるSVG再構成図に差し替えました。元のPNGを復元したものではありません。旧図版とRJ45ユーザー提供写真の原本は未回収です。[回収状況と出典](FIGURES_RECOVERY_2026-11-11_JA.md)。現行KiCadは2026-11-10レビュー版で製造未承認です。
+
 ---
 title: "VoiceMemory v1｜ファームウェア開発者向けハードウェア仕様書"
 subtitle: "HK829代替・4チャンネル録音／再生ユニット"
@@ -28,7 +30,7 @@ v1では **R1～R20をSMD 2012（0805）、1/8W、基本±5%** とし、コン�
 
 ## 2. 回路全体の構成
 
-![図1：システムのブロックと音声・制御系](figures/01_system_block.png){width=16cm}
+![図1：システムのブロックと音声・制御系](figures/01_system_block.svg){width=16cm}
 
 | ブロック | ハードウェア | ファームウェアが担当すること |
 |---|---|---|
@@ -91,7 +93,7 @@ v1では **R1～R20をSMD 2012（0805）、1/8W、基本±5%** とし、コン�
 
 ## 5. 録音系：マイクからADCまで
 
-![図2：録音・再生の音声経路](figures/02_audio_paths.png){width=16cm}
+![図2：録音・再生の音声経路](figures/02_audio_paths.svg){width=16cm}
 
 1. J1 pin2の `MIC_AUDIO` が録音系へ分岐する。マイクの通常通話経路はK1のNC接点へ向かう（録音開始まで接続を維持）。
 2. 録音入力はC11（BOM上1µF）で交流結合し、RV1（47kΩ）の録音レベル調整とVREFバイアスを経由してU4Aの正入力 `REC_LEVEL` へ入る。[H01][H02]
@@ -112,7 +114,7 @@ v1では **R1～R20をSMD 2012（0805）、1/8W、基本±5%** とし、コン�
 
 ## 7. K1切替接点・PhotoMOS・PTT
 
-![図3：リレー、センス、自動PTTの接点関係](figures/03_relay_ptt.png){width=16cm}
+![図3：リレー、センス、自動PTTの接点関係](figures/03_relay_ptt.svg){width=16cm}
 
 ### 7.1 K1の接点表（保存SCH）
 
@@ -191,7 +193,7 @@ CH32V003はメーカー公表で**プログラムFlash 16KB、SRAM 2KB、48MHz�
 
 **重要:** RJ45番号は本基板の8P8C基準であり、Icom・Yaesu・Kenwood等のマイク端子ピン割当がこの表と一致することを意味しない。メーカー別変換ケーブルで対応する。ファームウェアからUP/DOWN等を操作・検出する線は**存在しない**。また、RJ45の挿し込み向き・実装の鏡像はコネクタ図面と製作ケーブルのピン番号で確認する。[H01][H03]
 
-![図4：RJ45修正フットプリントの固定穴・信号ピン位置](figures/rj45_footprint_layout.png){width=14cm}
+![図4：RJ45修正フットプリントの固定穴・信号ピン位置](figures/rj45_footprint_layout.svg){width=14cm}
 
 固定穴φ3.20mm×2・中心間12.70mm、信号ピン8本φ0.90mm、ピン間1.02mm・列間1.78mm、固定穴と信号列のオフセット4.32mm（ユーザー提供寸法図準拠）。**フットプリントデータは同梱するが、KiCad原本への適用・端子向きの最終照合は未完了**。[H03]
 
@@ -317,15 +319,15 @@ CH32V003はメーカー公表で**プログラムFlash 16KB、SRAM 2KB、48MHz�
 
 | 資料番号 | 同梱・参照資料 | 中身／注意 |
 |---|---|---|
-| D01 | `figures/01_system_block.png` | v1回路系統図。本書2章 |
-| D02 | `figures/02_audio_paths.png` | ADC録音／PWM再生の経路。本書5～6章 |
-| D03 | `figures/03_relay_ptt.png` | K1／U3／PTT・センス回路。本書7章 |
-| D04 | `figures/legacy_block_diagram_20261025.png` | 先行説明図。**9月保存SCHベース**のため型番・値をv1確定扱いしない |
-| D05 | `figures/legacy_network_details_20261025.png` | 先行詳細接続図。**9月保存SCHベース**、ピン表の補助 |
-| D06 | `figures/rj45_footprint_layout.png` | ユーザー寸法図に基づくRJ45穴・端子配置 |
+| D01 | `figures/01_system_block.svg` | v1回路系統図。本書2章 |
+| D02 | `figures/02_audio_paths.svg` | ADC録音／PWM再生の経路。本書5～6章 |
+| D03 | `figures/03_relay_ptt.svg` | K1／U3／PTT・センス回路。本書7章 |
+| D04 | `figures/legacy_block_diagram_20261025.png`（旧原本未回収） | 先行説明図。**9月保存SCHベース**のため型番・値をv1確定扱いしない |
+| D05 | `figures/legacy_network_details_20261025.png`（旧原本未回収） | 先行詳細接続図。**9月保存SCHベース**、ピン表の補助 |
+| D06 | `figures/rj45_footprint_layout.svg` | ユーザー寸法図に基づくRJ45穴・端子配置 |
 | D07 | `Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod` | v1で採用するRJ45修正フットプリント（PCB未反映） |
-| D08 | `sources/RJ45_部品裏面参考写真.jpeg` | 提供された実部品の裏面写真、固定突起の確認用 |
-| D09 | `sources/RJ45_PCB_LAYOUT_寸法図.png` | 提供された寸法図、穴径・穴間距離・ピン列の根拠 |
+| D08 | `sources/RJ45_部品裏面参考写真.jpeg`（元画像未回収） | 提供された実部品の裏面写真、固定突起の確認用 |
+| D09 | `sources/RJ45_PCB_LAYOUT_寸法図.png`（元画像未回収） | 提供された寸法図、穴径・穴間距離・ピン列の根拠 |
 | H01 | `voicememory.kicad_sch`（2026-09-30保存） | 保存SCHのネット名・U1割当。**本書の外にある参照資料** |
 | H02 | `HK829_VoiceMemory_10set_BOM_Procurement_2026-10-19.xlsx` | 2026-10-05実回路抽出BOM／部品差分。**本書の外にある参照資料** |
 | H03 | `VoiceMemory_v1_reference_source.zip` 内 `docs/V1_BASELINE_JA.md` | 2026-10-28のv1設計仕様・未適用事項。原本参照文書を本ZIPに写しで同梱 |
@@ -347,10 +349,10 @@ CH32V003はメーカー公表で**プログラムFlash 16KB、SRAM 2KB、48MHz�
 
 **付録A：保存SCHに基づく先行回路説明図（v1照合前）**
 
-![付録A-1 主要回路接続・動作説明図（9月保存SCHベース）](figures/legacy_block_diagram_20261025.png){width=16cm}
+**付録A-1：旧図版PNGは未回収です。** 原本と同じ図であると断定できないため、代わりに[再構成したシステム系統図](figures/01_system_block.svg)および[図版回収記録](FIGURES_RECOVERY_2026-11-11_JA.md)を参照してください。
 
 **付録B：保存SCHに基づくネット接続説明図（v1照合前）**
 
-![付録B-1 U1、J1/J2、K1、U2、U3等の先行接続説明図](figures/legacy_network_details_20261025.png){width=16cm}
+**付録B-1：旧図版PNGは未回収です。** 関連する現行回路の説明は[再構成したリレー・PTT概念図](figures/03_relay_ptt.svg)および[KiCad 10回路図](../../../hardware/kicad/voicememory/voicememory.kicad_sch)を参照してください。
 
 **END / 本書の管理単位：文書版 v1-FW-HW-1.0。Gitのハード基準タグ `v1` は変更しない。**
