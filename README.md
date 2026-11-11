@@ -1,3 +1,5 @@
+> **v2正本更新（2026-11-11 16:44 JST）**：アップロードされた `voicememory-2026-11-11_164201.zip` を現在のv2基準とした。元ZIPは [無変更原本](hardware/source-archives/v2-baseline/voicememory-2026-11-11_164201.zip)、採用状況と検証証跡は [受領記録](hardware/reports/V2_BASELINE_RECEIPT_2026-11-11_JA.md)。**ERC/DRCはユーザー側で実施済みとの申告。ChatGPTによる再実行や結果0件の確認は未実施。** 以前の11月10日干渉報告は旧PCBの履歴情報。
+
 # Voice_Memory — バージョン別設計資料
 
 **現在の開発対象：v2（2026-11-10基準のKiCad 10レビュー版）**
