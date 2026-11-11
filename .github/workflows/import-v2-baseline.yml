@@ -1,0 +1,64 @@
+name: Import verified v2 user baseline archive
+
+on:
+  push:
+    branches:
+      - develop/v2
+    paths:
+      - hardware/source-archives/v2-baseline/voicememory-2026-11-11_164201.zip
+
+permissions:
+  contents: write
+
+jobs:
+  import-v2:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout current V2 branch
+        uses: actions/checkout@v4
+        with:
+          ref: develop/v2
+          persist-credentials: true
+      - name: Verify archived baseline and import KiCad files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, pathlib, zipfile
+          source=pathlib.Path('hardware/source-archives/v2-baseline/voicememory-2026-11-11_164201.zip')
+          expected='a64d1d4d439a141a7048c7fe233227507cebeaa69209cd91ddddc90118438c7a'
+          actual=hashlib.sha256(source.read_bytes()).hexdigest()
+          if actual!=expected:
+              raise SystemExit(f'ARCHIVE SHA256 MISMATCH: {actual}')
+          dest=pathlib.Path('hardware/kicad/voicememory')
+          accepted={
+              'Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod',
+              'Voice_Memory.pretty/SW_TVGP01_G73BB_12mm.kicad_mod',
+              'fp-lib-table','sym-lib-table',
+              'voicememory.kicad_pcb','voicememory.kicad_pro',
+              'voicememory.kicad_sch','Voice_Memory.kicad_sym'
+          }
+          with zipfile.ZipFile(source) as z:
+              if z.testzip() is not None: raise SystemExit('ZIP CRC failure')
+              members=set(z.namelist())
+              if members != accepted | {'voicememory.kicad_prl'}:
+                  raise SystemExit(f'UNEXPECTED ZIP ENTRIES: {members ^ (accepted | {"voicememory.kicad_prl"})}')
+              for name in sorted(accepted):
+                  f=dest/name
+                  f.parent.mkdir(parents=True,exist_ok=True)
+                  f.write_bytes(z.read(name))
+                  if f.read_bytes()!=z.read(name):
+                      raise SystemExit(f'COPY FAILED: {name}')
+                  print('IMPORTED',name,len(f.read_bytes()))
+          print('V2_ARCHIVE_SHA256',actual)
+          PY
+          git add -- hardware/kicad/voicememory
+          git diff --cached --stat
+          if git diff --cached --quiet; then
+            echo "No v2 file differences"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "hardware(v2): apply 2026-11-11 verified baseline KiCad ZIP"
+          git push origin HEAD:refs/heads/develop/v2

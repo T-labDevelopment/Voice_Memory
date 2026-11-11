@@ -1,0 +1,59 @@
+name: Export VoiceMemory v2 development data
+
+on:
+  push:
+    branches:
+      - develop/v2
+    paths:
+      - .github/workflows/export-v2.yml
+      - development/v2/**
+      - hardware/kicad/voicememory/**
+      - hardware/reports/**
+      - docs/firmware-hardware/v1/**
+      - scripts/**
+      - README.md
+      - version.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export-v2:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout exact development revision
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Package v2 sources, docs and audit files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(python3 -c 'import json; print(json.load(open("version.json",encoding="utf-8"))["version"])')" = "v2"
+          output="VoiceMemory_v2_development_${GITHUB_SHA:0:12}.zip"
+          git archive --format=zip --prefix=VoiceMemory_v2/ HEAD \
+            README.md version.json .gitignore \
+            development/v2 \
+            hardware/kicad/voicememory \
+            hardware/reports \
+            docs/firmware-hardware/v1 \
+            scripts > "$output"
+          unzip -t "$output" > /dev/null
+          sha256sum "$output" > "$output.sha256"
+          printf 'source_branch=develop/v2\nsource_commit=%s\nexport_file=%s\n' "$GITHUB_SHA" "$output" > EXPORT_ORIGIN.txt
+          cat "$output.sha256"
+          unzip -Z -1 "$output" | wc -l
+
+      - name: Upload v2 export archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: VoiceMemory-v2-development-${{ github.run_id }}
+          path: |
+            VoiceMemory_v2_development_*.zip
+            VoiceMemory_v2_development_*.zip.sha256
+            EXPORT_ORIGIN.txt
+          retention-days: 30
+          if-no-files-found: error

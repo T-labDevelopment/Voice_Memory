@@ -1,0 +1,1032 @@
+{
+  "archive": "voicememory-2026-10-05_162836(2).zip",
+  "archive_sha256": "b34d0f4ad92e3c439bdc9cf07ba6ea58b797cbf73fb96d74d4353c6b7bf29787",
+  "files": [
+    {
+      "path": "Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod",
+      "size": 5407,
+      "sha256": "2c9b67cb2c7889f417d90db3fd7a254e970bdc1fd41fe6e6d159b72ef225ab98"
+    },
+    {
+      "path": "Voice_Memory.pretty/SW_TVGP01_G73BB_12mm.kicad_mod",
+      "size": 3730,
+      "sha256": "1d977d3a2c1093f0684aeae0013f85f5cee4eb2b5adfdecc46f529cbc328b78e"
+    },
+    {
+      "path": "fp-lib-table",
+      "size": 165,
+      "sha256": "bacd9ccf3bb39a0f2bdb5797da9002746295f1958e8a8afeb54ccb7afbd714f1"
+    },
+    {
+      "path": "sym-lib-table",
+      "size": 166,
+      "sha256": "b01521c52e77627272d7d79a7caa661f5ba03cce369edba1c2b46d5352da8721"
+    },
+    {
+      "path": "voicememory.kicad_pcb",
+      "size": 881435,
+      "sha256": "ec3754d5b179c8d06fb7c81fafc9450dc7a0f129d53c9c5947d9dad63c116b97"
+    },
+    {
+      "path": "voicememory.kicad_prl",
+      "size": 2607,
+      "sha256": "dee75b04f942e3e1f00a4ecda97e9306462755fc827439020e1eaeda2c154711"
+    },
+    {
+      "path": "voicememory.kicad_pro",
+      "size": 17444,
+      "sha256": "1abb0d42e7843f9e82fb7d5a0387edec50c952f6baacefed1a0bf985fe03aae9"
+    },
+    {
+      "path": "voicememory.kicad_sch",
+      "size": 250253,
+      "sha256": "3219f5324fd17da1a3be84d5ef16fd54054f3ff56b77c541aeba33dcb96df83b"
+    },
+    {
+      "path": "Voice_Memory.kicad_sym",
+      "size": 22023,
+      "sha256": "795ef212c05d720620c472420c45c71efec26ce1c9d682c3526bc455b4b102f2"
+    }
+  ],
+  "sch_generator": "10.0",
+  "pcb_generator": "10.0",
+  "sch_components": 61,
+  "pcb_footprints": 65,
+  "pcb_unique_ref_labels": 62,
+  "mounting_holes_with_unassigned_reference": 4,
+  "pcb_tracks": 436,
+  "pcb_vias": 153,
+  "pcb_zones": 1,
+  "missing_on_pcb": [],
+  "missing_in_sch": [],
+  "critical": {
+    "U1": {
+      "sch": {
+        "value": "CH32V003F4P6",
+        "lib": "Voice_Memory:CH32V003F4P6",
+        "footprint": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
+        "value": "CH32V003F4P6",
+        "xy": [
+          103.7705,
+          80.4942
+        ]
+      }
+    },
+    "U2": {
+      "sch": {
+        "value": "AT25SF321B-SSHB",
+        "lib": "Voice_Memory:AT25SF321B-SSHB",
+        "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+        "value": "AT25SF321B-SSHB",
+        "xy": [
+          96.476,
+          65.0002
+        ]
+      }
+    },
+    "U3": {
+      "sch": {
+        "value": "AQV212",
+        "lib": "Voice_Memory:AQV212",
+        "footprint": "Package_DIP:DIP-6_W7.62mm",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Package_DIP:DIP-6_W7.62mm",
+        "value": "AQV212",
+        "xy": [
+          74.746,
+          64.4922
+        ]
+      }
+    },
+    "U4": {
+      "sch": {
+        "value": "NJM2732D",
+        "lib": "Amplifier_Operational:MCP6002-xP",
+        "footprint": "Package_DIP:DIP-8_W7.62mm",
+        "units": 3
+      },
+      "pcb": {
+        "lib": "Package_DIP:DIP-8_W7.62mm",
+        "value": "NJM2732D",
+        "xy": [
+          90.494,
+          90.7882
+        ]
+      }
+    },
+    "U5": {
+      "sch": {
+        "value": "AP7333-33SAG",
+        "lib": "Voice_Memory:AP7333-33SAG-7",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Package_TO_SOT_SMD:SOT-23",
+        "value": "AP7333-33SAG",
+        "xy": [
+          118.044,
+          81.0682
+        ]
+      }
+    },
+    "C1": {
+      "sch": {
+        "value": "10uF/35V",
+        "lib": "Device:C",
+        "footprint": "Capacitor_SMD:C_1206_3216Metric",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Capacitor_SMD:C_1206_3216Metric",
+        "value": "10uF/35V",
+        "xy": [
+          119.236,
+          71.3502
+        ]
+      }
+    },
+    "C2": {
+      "sch": {
+        "value": "1uF/25V X5R",
+        "lib": "Device:C",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Capacitor_SMD:C_0805_2012Metric",
+        "value": "1uF/25V X5R",
+        "xy": [
+          119.264,
+          69.0642
+        ]
+      }
+    },
+    "C4": {
+      "sch": {
+        "value": "1uF/25V X5R",
+        "lib": "Device:C",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Capacitor_SMD:C_0805_2012Metric",
+        "value": "1uF/25V X5R",
+        "xy": [
+          114.494,
+          72.8462
+        ]
+      }
+    },
+    "C11": {
+      "sch": {
+        "value": "1uF/25V",
+        "lib": "Device:C",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Capacitor_SMD:C_0805_2012Metric",
+        "value": "1uF/25V",
+        "xy": [
+          121.522,
+          58.8762
+        ]
+      }
+    },
+    "C18": {
+      "sch": {
+        "value": "10uF/6.3V X5R",
+        "lib": "Device:C",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Capacitor_SMD:C_0805_2012Metric",
+        "value": "10uF",
+        "xy": [
+          123.026,
+          79.4782
+        ]
+      }
+    },
+    "C19": {
+      "sch": {
+        "value": "1uF/25V",
+        "lib": "Device:C",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Capacitor_SMD:C_0805_2012Metric",
+        "value": "1uF/25V",
+        "xy": [
+          76.524,
+          78.7162
+        ]
+      }
+    },
+    "R20": {
+      "sch": {
+        "value": "270",
+        "lib": "Device:R",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Resistor_SMD:R_0805_2012Metric",
+        "value": "270",
+        "xy": [
+          78.302,
+          64.4922
+        ]
+      }
+    },
+    "J1": {
+      "sch": {
+        "value": "RJ45_8P8C MIC",
+        "lib": "Connector:RJ45",
+        "footprint": "Voice_Memory:RJ45_8P8C_THT_15.91x15.10",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Voice_Memory:RJ45_8P8C_THT_15.91x15.10",
+        "value": "RJ45_8P8C MIC",
+        "xy": [
+          112.606,
+          47.4722
+        ]
+      }
+    },
+    "J2": {
+      "sch": {
+        "value": "RJ45_8P8C RIG",
+        "lib": "Connector:RJ45",
+        "footprint": "Voice_Memory:RJ45_8P8C_THT_15.91x15.10",
+        "units": 1
+      },
+      "pcb": {
+        "lib": "Voice_Memory:RJ45_8P8C_THT_15.91x15.10",
+        "value": "RJ45_8P8C RIG",
+        "xy": [
+          82.606,
+          47.4742
+        ]
+      }
+    }
+  },
+  "rj45_library_pad_details": [
+    {
+      "pad": "",
+      "kind": "np_thru_hole",
+      "xy": [
+        -6.35,
+        -4.32
+      ],
+      "drill": [
+        "drill",
+        "3.2"
+      ]
+    },
+    {
+      "pad": "",
+      "kind": "np_thru_hole",
+      "xy": [
+        6.35,
+        -4.32
+      ],
+      "drill": [
+        "drill",
+        "3.2"
+      ]
+    },
+    {
+      "pad": "1",
+      "kind": "thru_hole",
+      "xy": [
+        -3.57,
+        0.0
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    },
+    {
+      "pad": "2",
+      "kind": "thru_hole",
+      "xy": [
+        -2.55,
+        1.78
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    },
+    {
+      "pad": "3",
+      "kind": "thru_hole",
+      "xy": [
+        -1.53,
+        0.0
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    },
+    {
+      "pad": "4",
+      "kind": "thru_hole",
+      "xy": [
+        -0.51,
+        1.78
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    },
+    {
+      "pad": "5",
+      "kind": "thru_hole",
+      "xy": [
+        0.51,
+        0.0
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    },
+    {
+      "pad": "6",
+      "kind": "thru_hole",
+      "xy": [
+        1.53,
+        1.78
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    },
+    {
+      "pad": "7",
+      "kind": "thru_hole",
+      "xy": [
+        2.55,
+        0.0
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    },
+    {
+      "pad": "8",
+      "kind": "thru_hole",
+      "xy": [
+        3.57,
+        1.78
+      ],
+      "drill": [
+        "drill",
+        "0.9"
+      ]
+    }
+  ],
+  "rj45_board_pad_details": {
+    "J1": [
+      {
+        "pad": "",
+        "kind": "np_thru_hole",
+        "xy": [
+          -6.35,
+          -4.32
+        ],
+        "drill": [
+          "drill",
+          "3.2"
+        ]
+      },
+      {
+        "pad": "",
+        "kind": "np_thru_hole",
+        "xy": [
+          6.35,
+          -4.32
+        ],
+        "drill": [
+          "drill",
+          "3.2"
+        ]
+      },
+      {
+        "pad": "1",
+        "kind": "thru_hole",
+        "xy": [
+          -3.57,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "2",
+        "kind": "thru_hole",
+        "xy": [
+          -2.55,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "3",
+        "kind": "thru_hole",
+        "xy": [
+          -1.53,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "4",
+        "kind": "thru_hole",
+        "xy": [
+          -0.51,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "5",
+        "kind": "thru_hole",
+        "xy": [
+          0.51,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "6",
+        "kind": "thru_hole",
+        "xy": [
+          1.53,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "7",
+        "kind": "thru_hole",
+        "xy": [
+          2.55,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "8",
+        "kind": "thru_hole",
+        "xy": [
+          3.57,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      }
+    ],
+    "J2": [
+      {
+        "pad": "",
+        "kind": "np_thru_hole",
+        "xy": [
+          -6.35,
+          -4.32
+        ],
+        "drill": [
+          "drill",
+          "3.2"
+        ]
+      },
+      {
+        "pad": "",
+        "kind": "np_thru_hole",
+        "xy": [
+          6.35,
+          -4.32
+        ],
+        "drill": [
+          "drill",
+          "3.2"
+        ]
+      },
+      {
+        "pad": "1",
+        "kind": "thru_hole",
+        "xy": [
+          -3.57,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "2",
+        "kind": "thru_hole",
+        "xy": [
+          -2.55,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "3",
+        "kind": "thru_hole",
+        "xy": [
+          -1.53,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "4",
+        "kind": "thru_hole",
+        "xy": [
+          -0.51,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "5",
+        "kind": "thru_hole",
+        "xy": [
+          0.51,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "6",
+        "kind": "thru_hole",
+        "xy": [
+          1.53,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "7",
+        "kind": "thru_hole",
+        "xy": [
+          2.55,
+          0.0
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      },
+      {
+        "pad": "8",
+        "kind": "thru_hole",
+        "xy": [
+          3.57,
+          1.78
+        ],
+        "drill": [
+          "drill",
+          "0.9"
+        ]
+      }
+    ]
+  },
+  "resistor_footprints": {
+    "Resistor_SMD:R_0805_2012Metric": 20
+  },
+  "capacitor_footprints": {
+    "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm": 4,
+    "Capacitor_SMD:C_0805_2012Metric": 14,
+    "Capacitor_SMD:C_1206_3216Metric": 1
+  },
+  "component_summary": {
+    "C13": {
+      "value": "100uF/16V",
+      "lib": "Device:C_Polarized",
+      "footprint": "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm",
+      "units": 1
+    },
+    "R16": {
+      "value": "22k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "SW4": {
+      "value": "TVGP01-G73BB / M2",
+      "lib": "Switch:SW_Push",
+      "footprint": "Voice_Memory:SW_TVGP01_G73BB_12mm",
+      "units": 1
+    },
+    "SW3": {
+      "value": "TVGP01-G73BB / M1",
+      "lib": "Switch:SW_Push",
+      "footprint": "Voice_Memory:SW_TVGP01_G73BB_12mm",
+      "units": 1
+    },
+    "C10": {
+      "value": "0.1uF/50V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "K1": {
+      "value": "AZ8462-3",
+      "lib": "Voice_Memory:AZ8462-3",
+      "footprint": "Relay_THT:Relay_DPDT_Kemet_EC2_NU",
+      "units": 1
+    },
+    "R19": {
+      "value": "1k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "J2": {
+      "value": "RJ45_8P8C RIG",
+      "lib": "Connector:RJ45",
+      "footprint": "Voice_Memory:RJ45_8P8C_THT_15.91x15.10",
+      "units": 1
+    },
+    "R5": {
+      "value": "10k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "C16": {
+      "value": "0.1uF/50V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "U2": {
+      "value": "AT25SF321B-SSHB",
+      "lib": "Voice_Memory:AT25SF321B-SSHB",
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "units": 1
+    },
+    "U4": {
+      "value": "NJM2732D",
+      "lib": "Amplifier_Operational:MCP6002-xP",
+      "footprint": "Package_DIP:DIP-8_W7.62mm",
+      "units": 3
+    },
+    "C7": {
+      "value": "0.1uF/50V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "C6": {
+      "value": "100uF/16V",
+      "lib": "Device:C_Polarized",
+      "footprint": "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm",
+      "units": 1
+    },
+    "C5": {
+      "value": "1nF/50V C0G",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "R20": {
+      "value": "270",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "C8": {
+      "value": "0.1uF/50V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "U3": {
+      "value": "AQV212",
+      "lib": "Voice_Memory:AQV212",
+      "footprint": "Package_DIP:DIP-6_W7.62mm",
+      "units": 1
+    },
+    "Q1": {
+      "value": "2SC1815L-Y-T92",
+      "lib": "Transistor_BJT:Q_NPN_ECB",
+      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+      "units": 1
+    },
+    "C17": {
+      "value": "0.1uF/50V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "SW1": {
+      "value": "CW-SB11KKFF",
+      "lib": "Switch:SW_SPST",
+      "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "units": 1
+    },
+    "J1": {
+      "value": "RJ45_8P8C MIC",
+      "lib": "Connector:RJ45",
+      "footprint": "Voice_Memory:RJ45_8P8C_THT_15.91x15.10",
+      "units": 1
+    },
+    "U1": {
+      "value": "CH32V003F4P6",
+      "lib": "Voice_Memory:CH32V003F4P6",
+      "footprint": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
+      "units": 1
+    },
+    "C19": {
+      "value": "1uF/25V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "C15": {
+      "value": "0.1uF/50V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "C3": {
+      "value": "100uF/16V",
+      "lib": "Device:C_Polarized",
+      "footprint": "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm",
+      "units": 1
+    },
+    "C18": {
+      "value": "10uF/6.3V X5R",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "R9": {
+      "value": "470",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R14": {
+      "value": "100k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "C4": {
+      "value": "1uF/25V X5R",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "RV2": {
+      "value": "10k",
+      "lib": "Voice_Memory:R_Potentiometer_Trim_VM",
+      "footprint": "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical",
+      "units": 1
+    },
+    "R11": {
+      "value": "1k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "C12": {
+      "value": "1nF/50V C0G",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "C1": {
+      "value": "10uF/35V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "units": 1
+    },
+    "LED1": {
+      "value": "LT6CU7R",
+      "lib": "Voice_Memory:LT6CU7R",
+      "footprint": "LED_THT:LED_D5.0mm-3",
+      "units": 1
+    },
+    "R2": {
+      "value": "10k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R12": {
+      "value": "100k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "BT1": {
+      "value": "BH-331-3A",
+      "lib": "Device:Battery",
+      "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "units": 1
+    },
+    "R18": {
+      "value": "1k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R15": {
+      "value": "220k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R7": {
+      "value": "4.7k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R4": {
+      "value": "10k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "SW5": {
+      "value": "TVGP01-G73BB / M3",
+      "lib": "Switch:SW_Push",
+      "footprint": "Voice_Memory:SW_TVGP01_G73BB_12mm",
+      "units": 1
+    },
+    "R8": {
+      "value": "470",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R3": {
+      "value": "10k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R17": {
+      "value": "4.7k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "R13": {
+      "value": "4.7k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "C14": {
+      "value": "0.1uF/50V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "U5": {
+      "value": "AP7333-33SAG",
+      "lib": "Voice_Memory:AP7333-33SAG-7",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "units": 1
+    },
+    "C11": {
+      "value": "1uF/25V",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    },
+    "RV1": {
+      "value": "47k",
+      "lib": "Voice_Memory:R_Potentiometer_Trim_VM",
+      "footprint": "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical",
+      "units": 1
+    },
+    "R10": {
+      "value": "470",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "J3": {
+      "value": "WCH-Link 3P",
+      "lib": "Connector_Generic:Conn_01x03",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "units": 1
+    },
+    "Q2": {
+      "value": "2SC1815L-Y-T92",
+      "lib": "Transistor_BJT:Q_NPN_ECB",
+      "footprint": "Package_TO_SOT_THT:TO-92_Inline",
+      "units": 1
+    },
+    "C9": {
+      "value": "100uF/16V",
+      "lib": "Device:C_Polarized",
+      "footprint": "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm",
+      "units": 1
+    },
+    "R6": {
+      "value": "22k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "D1": {
+      "value": "1N4148W",
+      "lib": "Voice_Memory:D_1N4148_VM",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "units": 1
+    },
+    "SW6": {
+      "value": "TVGP01-G73BB / M4",
+      "lib": "Switch:SW_Push",
+      "footprint": "Voice_Memory:SW_TVGP01_G73BB_12mm",
+      "units": 1
+    },
+    "R1": {
+      "value": "10k",
+      "lib": "Device:R",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "units": 1
+    },
+    "SW2": {
+      "value": "TVGP01-G73BB / REC",
+      "lib": "Switch:SW_Push",
+      "footprint": "Voice_Memory:SW_TVGP01_G73BB_12mm",
+      "units": 1
+    },
+    "C2": {
+      "value": "1uF/25V X5R",
+      "lib": "Device:C",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "units": 1
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "date": "2026-11-10",
+  "basis": "v1-cap-sourcing-2026-11-10",
+  "minimum_smd": "0805 (2012)",
+  "change_count": 11,
+  "changes": [
+    {
+      "ref": "C2",
+      "previous_value": "1uF/25V X6S",
+      "new_value": "1uF/25V PMLCAP",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Akizuki 107397 25MU105MA23216 25V 1uF PMLCAP",
+      "nets": [
+        "VBAT_SW",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "dfed5f0c-112c-4a60-924b-47cf0e24538c"
+        ],
+        [
+          "2",
+          "f042b527-c032-45ca-824f-f712d6731dc7"
+        ]
+      ]
+    },
+    {
+      "ref": "C4",
+      "previous_value": "1uF/25V X6S",
+      "new_value": "1uF/25V PMLCAP",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Akizuki 107397 25MU105MA23216 25V 1uF PMLCAP",
+      "nets": [
+        "+3V3",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "779aa78c-b18b-4406-8c40-993e79e68ce8"
+        ],
+        [
+          "2",
+          "9e61c9e0-0171-4ca9-8ca9-0f409a168ac3"
+        ]
+      ]
+    },
+    {
+      "ref": "C11",
+      "previous_value": "1uF/25V",
+      "new_value": "1uF/25V PMLCAP",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Akizuki 107397 25MU105MA23216 25V 1uF PMLCAP",
+      "nets": [
+        "MIC_AUDIO",
+        "REC_AC"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "2275acd1-6c94-420c-a541-bd6f6fcea276"
+        ],
+        [
+          "2",
+          "20bbb19a-ae89-400f-8d63-06b8a1fe7958"
+        ]
+      ]
+    },
+    {
+      "ref": "C19",
+      "previous_value": "1uF/25V",
+      "new_value": "1uF/25V PMLCAP",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Akizuki 107397 25MU105MA23216 25V 1uF PMLCAP",
+      "nets": [
+        "PLAY_BIASED",
+        "PLAY_AC"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "db72acf3-dab8-4a27-bdb8-8c31ce9ef90e"
+        ],
+        [
+          "2",
+          "00953d2b-ba91-45a4-89bc-99dadb8f3bf5"
+        ]
+      ]
+    },
+    {
+      "ref": "C7",
+      "previous_value": "0.1uF/100V X7R",
+      "new_value": "0.1uF/100V CH",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Sengoku GRM31C2C2A104JA01L 100V 0.1uF CH (JIS)",
+      "nets": [
+        "+3V3",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "47994e51-6fe8-432e-abb2-639ff14ee91e"
+        ],
+        [
+          "2",
+          "657fee0e-8f43-4f2f-b8a5-f839cbc35839"
+        ]
+      ]
+    },
+    {
+      "ref": "C8",
+      "previous_value": "0.1uF/100V X7R",
+      "new_value": "0.1uF/100V CH",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Sengoku GRM31C2C2A104JA01L 100V 0.1uF CH (JIS)",
+      "nets": [
+        "+3V3",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "dfb4c037-fe4c-4ac2-94fc-8190841999b1"
+        ],
+        [
+          "2",
+          "2ceec165-a0bc-4bd2-9f81-25fd7eecf636"
+        ]
+      ]
+    },
+    {
+      "ref": "C10",
+      "previous_value": "0.1uF/100V X7R",
+      "new_value": "0.1uF/100V CH",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Sengoku GRM31C2C2A104JA01L 100V 0.1uF CH (JIS)",
+      "nets": [
+        "+3V3",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "738bdfc9-a2e8-46dc-9241-75a6aa719ddb"
+        ],
+        [
+          "2",
+          "7da53fa2-26d5-4afb-b6be-e8e02fb30932"
+        ]
+      ]
+    },
+    {
+      "ref": "C14",
+      "previous_value": "0.1uF/100V X7R",
+      "new_value": "0.1uF/100V CH",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Sengoku GRM31C2C2A104JA01L 100V 0.1uF CH (JIS)",
+      "nets": [
+        "AUDIO_ADC",
+        "VREF"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "d813388a-7348-4a81-b96e-2adee5d6174f"
+        ],
+        [
+          "2",
+          "8b5562d2-e280-4702-a576-81f9dc7091ad"
+        ]
+      ]
+    },
+    {
+      "ref": "C15",
+      "previous_value": "0.1uF/100V X7R",
+      "new_value": "0.1uF/100V CH",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Sengoku GRM31C2C2A104JA01L 100V 0.1uF CH (JIS)",
+      "nets": [
+        "PWM_F1",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "4e5dbcfc-4ee7-43e4-8259-4af6d0fc3ce8"
+        ],
+        [
+          "2",
+          "68c8071e-a997-44c3-8925-e00dcc51af7b"
+        ]
+      ]
+    },
+    {
+      "ref": "C16",
+      "previous_value": "0.1uF/100V X7R",
+      "new_value": "0.1uF/100V CH",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Sengoku GRM31C2C2A104JA01L 100V 0.1uF CH (JIS)",
+      "nets": [
+        "PWM_F2",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "5542e18e-66f1-40df-b48d-aba2dd11b4e0"
+        ],
+        [
+          "2",
+          "d96081e0-0f59-41f2-915f-3abc07ae5b06"
+        ]
+      ]
+    },
+    {
+      "ref": "C17",
+      "previous_value": "0.1uF/100V X7R",
+      "new_value": "0.1uF/100V CH",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "part": "Sengoku GRM31C2C2A104JA01L 100V 0.1uF CH (JIS)",
+      "nets": [
+        "PTT_SENSE_MCU",
+        "GND_AUD"
+      ],
+      "pad_uuids": [
+        [
+          "1",
+          "4fafd5f5-ca67-4ed6-a63a-bf6e643e98cf"
+        ],
+        [
+          "2",
+          "27b844b0-2b63-404d-aedd-39a862b09f25"
+        ]
+      ]
+    }
+  ],
+  "source_of_native_footprint": "C1 official KiCad C_1206_3216Metric geometry copied in full; no custom cache",
+  "limitations": [
+    "KiCad10 executable not installed: official ERC/DRC not executed",
+    "PCB retained original component XY and tracks/vias; must run DRC, re-layout if clashes",
+    "Zone refill not executed; original GND zones need refill",
+    "Sengoku stock quantity not directly guaranteed; recheck at purchase"
+  ]
+}

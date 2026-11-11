@@ -1,0 +1,22 @@
+{
+  "source": "voicememory-2026-10-05_162836(2).zip",
+  "applied": [
+    "J1/J2 NPTH hole Y -4.32 => +4.32, pad positions/nets retained",
+    "C11/C19 footprint to standard KiCad C_0603_1608Metric; 1uF/25V",
+    "U2 W25Q32RVCSJM / KiCad SOP-8_5.28x5.23mm_P1.27mm; bridging segments added",
+    "U3 TLP592A(F) DIP6 and pin naming; pad3/pad5 NC external; R20 original retained",
+    "R2/R3 each moved 0.75mm outward with 4 short bridge segments",
+    "RJ45 changed-hole crossing nets PTT_GND, MIC_DOWN, MIC_DC_PASS rerouted; extra MIC_DC_PASS via used",
+    "23 outdated ground zone filled_polygon caches invalidated; refill in KiCad mandatory"
+  ],
+  "not_changed": [
+    "R1-R20 0805 values",
+    "C3/C6/C9/C13 THT electrolytics",
+    "C1 1206 10uF",
+    "U4 NJM2732D",
+    "functional software specification"
+  ],
+  "tests": "Static assertions and geometric approximations only. KiCad 10 CLI ERC/DRC NOT performed. Manufacturing release NOT approved.",
+  "pcb_revision": "v1-eco-2026-10-30",
+  "component_count_expected": 61
+}

@@ -1,0 +1,134 @@
+{
+  "U2": [
+    {
+      "pin": "1",
+      "net": "FLASH_CS",
+      "nearest_different_net": []
+    },
+    {
+      "pin": "2",
+      "net": "SPI_MISO",
+      "nearest_different_net": [
+        [
+          0.966,
+          "R2:1:FLASH_WP_N"
+        ]
+      ]
+    },
+    {
+      "pin": "3",
+      "net": "FLASH_WP_N",
+      "nearest_different_net": []
+    },
+    {
+      "pin": "4",
+      "net": "GND_AUD",
+      "nearest_different_net": [
+        [
+          0.893,
+          "R2:1:FLASH_WP_N"
+        ]
+      ]
+    },
+    {
+      "pin": "5",
+      "net": "SPI_MOSI",
+      "nearest_different_net": []
+    },
+    {
+      "pin": "6",
+      "net": "SPI_SCK",
+      "nearest_different_net": [
+        [
+          0.873,
+          "R3:1:FLASH_HOLD_N"
+        ]
+      ]
+    },
+    {
+      "pin": "7",
+      "net": "FLASH_HOLD_N",
+      "nearest_different_net": [
+        [
+          1.075,
+          "R3:2:+3V3"
+        ]
+      ]
+    },
+    {
+      "pin": "8",
+      "net": "+3V3",
+      "nearest_different_net": []
+    }
+  ],
+  "C11": [
+    {
+      "pin": "1",
+      "net": "MIC_AUDIO",
+      "nearest_different_net": []
+    },
+    {
+      "pin": "2",
+      "net": "REC_AC",
+      "nearest_different_net": []
+    }
+  ],
+  "C19": [
+    {
+      "pin": "1",
+      "net": "PLAY_BIASED",
+      "nearest_different_net": []
+    },
+    {
+      "pin": "2",
+      "net": "PLAY_AC",
+      "nearest_different_net": []
+    }
+  ],
+  "J1": [
+    {
+      "hole": [
+        118.956,
+        43.1522
+      ],
+      "below_0p4mm_clearance": []
+    },
+    {
+      "hole": [
+        106.256,
+        43.1522
+      ],
+      "below_0p4mm_clearance": [
+        [
+          0.352,
+          "trace:MIC_DC_PASS"
+        ]
+      ]
+    }
+  ],
+  "J2": [
+    {
+      "hole": [
+        88.956,
+        43.1542
+      ],
+      "below_0p4mm_clearance": [
+        [
+          0.333,
+          "via:GND_AUD"
+        ],
+        [
+          0.354,
+          "trace:MIC_DC_PASS"
+        ]
+      ]
+    },
+    {
+      "hole": [
+        76.256,
+        43.1542
+      ],
+      "below_0p4mm_clearance": []
+    }
+  ]
+}

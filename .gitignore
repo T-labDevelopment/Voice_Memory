@@ -1,0 +1,13 @@
+# KiCad caches and machine-specific files
+*-backups/
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+*.tmp
+__pycache__/
+*.pyc
+# Generated images are not tracked under the project rule
+*.png
+*.jpg
+*.jpeg

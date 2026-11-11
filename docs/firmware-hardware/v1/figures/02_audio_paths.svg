@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="680" viewBox="0 0 1280 680" role="img" aria-labelledby="title desc">
+<title id="title">VoiceMemory v1 : audio paths</title><desc id="desc">Conceptual ADC recording and PWM playback; component identities must follow the current KiCad project</desc>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#516781"/></marker></defs>
+<rect width="1280" height="680" fill="#f6f8fb"/><rect x="16" y="16" width="1248" height="648" rx="16" fill="#fff" stroke="#d7e0e9"/>
+<text x="42" y="64" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#17293b">VoiceMemory v1 : audio paths</text>
+<text x="42" y="88" font-family="Arial,sans-serif" font-size="14" fill="#53657b">Conceptual ADC recording and PWM playback; component identities must follow the current KiCad project</text>
+<text x="48" y="135" font-family="Arial,sans-serif" font-size="18" fill="#174d7c">RECORDING (J1 microphone to MCU ADC)</text>
+<rect x="45" y="168" width="174" height="82" rx="12" fill="#fff3e4" stroke="#6881a0" stroke-width="1.5"/><text x="60" y="200" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">J1 : pin 2</text><text x="60" y="221" font-size="13" font-family="Arial,sans-serif" fill="#35495a">MIC_AUDIO</text>
+<rect x="264" y="168" width="174" height="82" rx="12" fill="#e7eff9" stroke="#6881a0" stroke-width="1.5"/><text x="279" y="200" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">C11 : 1uF</text><text x="279" y="221" font-size="13" font-family="Arial,sans-serif" fill="#35495a">AC coupling</text>
+<rect x="483" y="168" width="174" height="82" rx="12" fill="#e7eff9" stroke="#6881a0" stroke-width="1.5"/><text x="498" y="200" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">RV1 : 47k</text><text x="498" y="221" font-size="13" font-family="Arial,sans-serif" fill="#35495a">Record level</text>
+<rect x="702" y="168" width="174" height="82" rx="12" fill="#e7eff9" stroke="#6881a0" stroke-width="1.5"/><text x="717" y="200" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">U4A / R8</text><text x="717" y="221" font-size="13" font-family="Arial,sans-serif" fill="#35495a">Preamp + 470R</text>
+<rect x="921" y="168" width="288" height="82" rx="12" fill="#e8f6ef" stroke="#6881a0" stroke-width="1.5"/><text x="936" y="200" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">U1 : PC4 / AUDIO_ADC</text><text x="936" y="221" font-size="13" font-family="Arial,sans-serif" fill="#35495a">10bit ADC -&gt; PCM buffer</text>
+<path d="M219 208 H264" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M438 208 H483" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M657 208 H702" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M876 208 H921" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="622" y="283" width="324" height="67" rx="12" fill="#fff9e7" stroke="#6881a0" stroke-width="1.5"/><text x="637" y="315" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">VREF from R4 / R5 / C18</text><text x="637" y="336" font-size="13" font-family="Arial,sans-serif" fill="#35495a">ADC and amplifier bias reference</text>
+<path d="M780 283 V252" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/><text x="794" y="272" font-family="Arial,sans-serif" font-size="12" fill="#364b60">bias</text>
+<text x="48" y="393" font-family="Arial,sans-serif" font-size="18" fill="#174d7c">PLAYBACK (MCU PWM to J2 radio microphone input)</text>
+<rect x="45" y="425" width="174" height="92" rx="12" fill="#e8f6ef" stroke="#6881a0" stroke-width="1.5"/><text x="60" y="457" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">U1 : PC3</text><text x="60" y="478" font-size="13" font-family="Arial,sans-serif" fill="#35495a">AUDIO_PWM</text>
+<rect x="264" y="425" width="174" height="92" rx="12" fill="#e7eff9" stroke="#6881a0" stroke-width="1.5"/><text x="279" y="457" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">R9/C15</text><text x="279" y="478" font-size="13" font-family="Arial,sans-serif" fill="#35495a">R10/C16 low-pass</text>
+<rect x="483" y="425" width="174" height="92" rx="12" fill="#e7eff9" stroke="#6881a0" stroke-width="1.5"/><text x="498" y="457" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">U4B</text><text x="498" y="478" font-size="13" font-family="Arial,sans-serif" fill="#35495a">PLAY_BIASED</text>
+<rect x="702" y="425" width="174" height="92" rx="12" fill="#e7eff9" stroke="#6881a0" stroke-width="1.5"/><text x="717" y="457" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">C19 / RV2</text><text x="717" y="478" font-size="13" font-family="Arial,sans-serif" fill="#35495a">1uF / output level</text>
+<rect x="921" y="425" width="288" height="92" rx="12" fill="#fff3e4" stroke="#6881a0" stroke-width="1.5"/><text x="936" y="457" font-size="17" font-family="Arial,sans-serif" font-weight="bold" fill="#123451">K1 contact A -&gt; J2</text><text x="936" y="478" font-size="13" font-family="Arial,sans-serif" fill="#35495a">PLAY_OUT -&gt; RIG_AUDIO</text>
+<path d="M219 472 H264" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M438 472 H483" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M657 472 H702" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<path d="M876 472 H921" fill="none" stroke="#516781" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="48" y="565" font-family="Arial,sans-serif" font-size="14" fill="#364b60">C11 and C19: 1206 PMLCAP 1uF/25V in the 2026-11-10 sourcing review; original BOM differed.</text>
+<text x="48" y="588" font-family="Arial,sans-serif" font-size="14" fill="#364b60">K1 NC passes MIC_AUDIO to RIG_AUDIO; energized NO inserts PLAY_OUT.</text>
+<text x="48" y="621" font-family="Arial,sans-serif" font-size="13" fill="#975129">Use this figure for firmware orientation only. Validate nets and all component values against KiCad.</text></svg>

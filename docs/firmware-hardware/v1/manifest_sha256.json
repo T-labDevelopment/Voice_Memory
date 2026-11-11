@@ -1,0 +1,18 @@
+{
+  "README.md": "96eb27137679a6f86feb035d35880a6b20ef06a85d19fd62d8f35fdfb7771363",
+  "VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書.docx": "f67535ca720d4bd8fe64043299130191b02b472f676c5689e91d9b26b40d30b0",
+  "VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書.md": "63aba6dafdb76f50db90ae96bba490a2e5badec67a38f6bf3ae7916b78bcf544",
+  "VoiceMemory_v1_ファームウェア開発者向けハードウェア仕様書_CID.pdf": "f0385cec52f305fbbbbd456e86fa542ec08381b512e23b33a5a58cb005095bd2",
+  "Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod": "4318124ba7ea44a1c2b61f613b437c371bd3209fa0c6b4a4dd9daf96c8b6e33d",
+  "figures/01_system_block.png": "8137cb06a7b65874fac7cab58285b48acca231ee5aa6e7f53f89a4bb8fc1a8f6",
+  "figures/02_audio_paths.png": "5d395f9cda942d807a97b821239a63e3fe55a9c49c55795b2598fd78373669fc",
+  "figures/03_relay_ptt.png": "d1332e25d77a5765a878f2294c12124b8d8e41bbfcd4b31b041337b8c52ee0a9",
+  "figures/legacy_block_diagram_20261025.png": "53dbd59a700b45df337918116ccb711b12aebb7589dbaeab0319f47793af5408",
+  "figures/legacy_network_details_20261025.png": "9225793d44fbed2b8b32388d223da563112c27defdfea5d89e0a8a61b715ac43",
+  "figures/rj45_footprint_layout.png": "58aeb2ab39d6cb25186f40b3bf8ca4f3172b6c51c8e60464fd40297014d8afb8",
+  "pinmap_CH32V003F4P6_legacySCH.csv": "40c68cf5afc6111dad6123708f3d82bf31a409608690ec6fa87644c26e7d402b",
+  "sources/KICAD_APPLICATION_STATUS_JA.md": "6c2350d3a7cdbcccedbeefe713442e2f6c12eb57b5b47dfdd917db23f77db453",
+  "sources/RJ45_PCB_LAYOUT_寸法図.png": "ba37c019ed4900cf300a9cc6cd57dbb3de15aa052f2821905d3862b34ddbb29a",
+  "sources/RJ45_部品裏面参考写真.jpeg": "dad72523dfc5e677400794cf39b58b78e0c915f0f4c9eb2d99bef5bdce0a78f8",
+  "sources/V1_BASELINE_JA.md": "4f21fcf0d16be6bd87f091af5a88aba57d80d4ca76e66b8b14ad55da243a6ba1"
+}
