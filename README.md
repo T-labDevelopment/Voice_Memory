@@ -1,30 +1,28 @@
-> **v2正本更新（2026-11-11 16:44 JST）**：アップロードされた `voicememory-2026-11-11_164201.zip` を現在のv2基準とした。元ZIPは [無変更原本](hardware/source-archives/v2-baseline/voicememory-2026-11-11_164201.zip)、採用状況と検証証跡は [受領記録](hardware/reports/V2_BASELINE_RECEIPT_2026-11-11_JA.md)。**ERC/DRCはユーザー側で実施済みとの申告。ChatGPTによる再実行や結果0件の確認は未実施。** 以前の11月10日干渉報告は旧PCBの履歴情報。
+# Voice_Memory — v1試作資料とv2製造承認基準
 
-# Voice_Memory — バージョン別設計資料
+**現在の製造・開発基準：v2（2026-11-11製造承認済み）**
 
-**現在の開発対象：v2（2026-11-10基準のKiCad 10レビュー版）**
-
-プロジェクトの設計データは**v1試作版**と**v2現行開発版**に分けて管理します。旧v1を現在の設計に上書きせず、製造検証のために独立参照します。
-
-| 版 | 目的・状態 | 参照先 |
+| 版 | 位置付け | 参照 |
 |---|---|---|
-| **v1** | **試作・製造検証用の旧基準版**。2026-10-30リリースZIP。**費用計算不要**。未製造承認 | **[v1試作・製造検証資料](releases/v1-prototype/README.md)** |
-| **v2** | **現在の開発・回路修正・検証対象**。11月10日コンデンサECOを含む。未製造承認 | **[v2開発・技術仕様](development/v2/README.md)** |
-| v2費用 | v2の開発・試作費と必要条件。未確定額を分離 | [v2費用・必要仕様](development/v2/DEVELOPMENT_AND_COST_SCOPE_JA.md) |
+| **v1** | 旧試作・製造検証用の資料。費用計算は行わない | [v1専用ページ](releases/v1-prototype/README.md) |
+| **v2** | **製造承認済み（ユーザー承認・2026-11-11）** | [v2製造承認記録](releases/v2-manufacturing-approved-2026-11-11/README.md) |
+| v2技術 | 現行の回路・PCB・開発仕様 | [v2仕様書](development/v2/README.md) |
+| v2費用 | v2のみ費用を管理。総額は未見積 | [開発費・必要仕様](development/v2/DEVELOPMENT_AND_COST_SCOPE_JA.md) |
 
-## 設計データを開く場合
+## 製造データ
 
-- **現行v2の回路図・PCB：** [`hardware/kicad/voicememory/`](hardware/kicad/voicememory/)
-- **現行v2の技術監査：** [11月10日コンデンサ・フットプリント監査](hardware/reports/CAP_MIN_0805_2026-11-10_JA.md)
-- **旧v1原本の照合記録：** [10月30日ZIPとのハッシュ比較](hardware/reports/ECO_ZIP_RECEIPT_COMPARE_2026-11-11_JA.md)
-- **FW開発資料：** [旧版仕様書と更新補足](docs/firmware-hardware/v1/README.md)。旧版資料には世代差があり、v2の実装時は回路図を優先する。
-- **履歴バックアップ：** [`history/`](history/README.md)
+- **承認原本ZIP：** [`voicememory-2026-11-11_164201.zip`](hardware/source-archives/v2-baseline/voicememory-2026-11-11_164201.zip)
+- **承認原本SHA-256：** `a64d1d4d439a141a7048c7fe233227507cebeaa69209cd91ddddc90118438c7a`
+- **KiCad 10設計ファイル：** [`hardware/kicad/voicememory/`](hardware/kicad/voicememory/)
+- **受領・検証証拠：** [v2基準ZIPの照合記録](hardware/reports/V2_BASELINE_RECEIPT_2026-11-11_JA.md)
+- **製造承認：** プロジェクト責任者（ユーザー）の明示指示により承認済み。
+- **ERC／DRC：** ユーザー側で実施済みと申告。正式検証レポート未収録、独立再実行は未実施であり、エラー0／警告0という個別結果の確認は未完了。
 
-> **注意：** v1の原本ZIP `VoiceMemory_v1_ECO_2026-10-30_KiCad10(1).zip` 自体はまだGitHub上へ同一バイナリとして保存されていません。原本のSHAと内容はv1索引に記録済み。GitHubの現行 `.kicad_sch`・`.kicad_pcb` は**v2の改修データ**なので、v1原本として流用しないでください。
+2026-11-10以前のECOレポートは過去のPCBに関する**履歴資料**であり、現行製造承認版に対する未解決不良の判定には使用しない。
 
-## Gitの取り扱い
+## Git運用
 
-- 開発ブランチ：`develop/v2`。このブランチの `version.json` は `v2`。
-- 従来の `fix/v1-cap-min0805-2026-11-10` は変更履歴として残す。過去コミット、bundle、既存タグの書換えはしない。
-- `main` は未統合。統合は明示的な指示後に行う。
-- **KiCad 10 ERC/DRC、GNDゾーン再フィル、実機検証は未完了。Gerber出力や製造適合の判定は保留。**
+- 現行開発ブランチ：`develop/v2`。
+- [v2製造承認データ](releases/v2-manufacturing-approved-2026-11-11/README.md)は固定ZIPのハッシュで同定。設計変更は別コミットで扱う。
+- `main` 統合、旧v1タグ改変、過去コミットの書換えは実施していない。
+- [旧v1原本の受領・比較記録](hardware/reports/ECO_ZIP_RECEIPT_COMPARE_2026-11-11_JA.md)と[履歴バックアップ](history/README.md)は保管を維持する。
