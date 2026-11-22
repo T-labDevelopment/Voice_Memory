@@ -1,0 +1,1 @@
+(sym_lib_table (lib (name "Voice_Memory") (type "KiCad") (uri "${KIPRJMOD}/Voice_Memory.kicad_sym") (options "") (descr "v2 project lib")) (lib (name "VoiceMemory_TDisplay") (type "KiCad") (uri "${KIPRJMOD}/VoiceMemory_TDisplay.kicad_sym") (options "") (descr "TDisplay and AQY412S")))
