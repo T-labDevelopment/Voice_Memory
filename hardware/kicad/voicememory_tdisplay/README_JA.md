@@ -1,4 +1,6 @@
-# VoiceMemory v3｜LILYGO T-Display（ESP32）簡易回路設計
+# VoiceMemory_TDisplay_ESP32 Rev.A｜LILYGO T-Display簡易回路設計
+
+> **プロジェクト区分（確定）**：本回路は既存のCH32V003試作版とは別製品・別ファームウェアとして管理する **VoiceMemory_TDisplay_ESP32 Rev.A** の設計ドラフトです。AZ8462-3機械式リレーを維持し、PhotoMOS置換案は標準に採用しません。詳細は [PROJECT_SCOPE_JA.md](PROJECT_SCOPE_JA.md) を参照してください。既存v1/v2の検証・製造承認を本製品へ流用しません。現在はGitHubリポジトリ内の専用ブランチによる暫定分離であり、専用リポジトリの作成・移行は未実施です。
 
 **設計日：2026-11-22／状態：回路図ドラフト・実機未検証・PCB未作成**
 
