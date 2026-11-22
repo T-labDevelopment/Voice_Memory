@@ -12,11 +12,11 @@ This v3 project is independent. **Do not alter the approved v2 files or its sour
 - Power and firmware via the T-Display onboard USB-C or its documented 1S LiPo input. **Never connect AA3 battery to the T-Display 1S LiPo input.** Analog and relay circuitry powered from board `+3V3`, current limit / LDO temp / battery droop must be assessed.
 
 ## Project files
-- `VoiceMemory_TDisplay.kicad_sch`: fully editable KiCad 10 draft schematic. Standard Device/Connector/Switch/Transistor/MCP6002 cache entries copied **unchanged from the approved v2 KiCad schematic**. Original v2 exact custom Flash/Relay/TLP/Diode/trim symbol entries are reused. Each electrical pin is wired by an explicit **global label** or marked no-connect, 50mil grid.
+- `VoiceMemory_TDisplay.kicad_sch`: fully editable KiCad 10 draft schematic. Standard Device/Connector/Switch/Transistor/MCP6002 cache entries copied **unchanged from the approved v2 KiCad schematic**. Original v2 exact custom Flash/Relay/TLP/Diode/trim symbol entries are reused. Each electrical pin is connected at its endpoint by an explicit **global label** or is marked no-connect, on a 50mil grid. A standard-library **PWR_FLAG on GND_AUD** identifies the external common ground as an ERC power source; MOD1 +3V3 is modeled as power_out.
 - `VoiceMemory_TDisplay.kicad_sym`: board module symbol newly authored for this branch only.
 - `Voice_Memory.kicad_sym`: full, unmodified v2 **custom project symbol library**, not a substitute for official KiCad standard libraries.
 - `Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod`: copied v2 legacy RJ45 footprint; mechanical and purchased connector fit verification needed.
-- `pinmap.csv`, `bom_draft.csv`: editable pin map and draft component register.
+- `pinmap.csv`, `bom_draft.csv`: editable pin map and **45 unique-reference component** draft register (MCP6002 U4 has three schematic units but one physical component).
 
 ## Connections and safety
 | Function | ESP32 GPIO | External part or net |
@@ -46,7 +46,7 @@ This v3 project is independent. **Do not alter the approved v2 files or its sour
 - `+3V3` on MOD1 is a 3V3 source and power_out in the module symbol; validate actual regulator budget under relay coil 46.7mA and ESP32 load, particularly during Wi-Fi use. No required PWR_FLAG on this net while it is typed as a power source.
 - U2 W25Q32RVCSJM is 208mil SOP-8, **not** interchangeable with 150mil SOP8 without land pattern change.
 - U3 TLP592A uses LED pins 1/2 and dry-contact pins 4/6; pins 3/5 marked NC per legacy v2 library.
-- `D1` flyback diode polarity and K1 footprint mapping are **provisional**, inspect against actual device datasheet and KiCad library before any PCB.
+- **D1 flyback**: diode pin1 (K) to `+3V3`, pin2 (A) to `RELAY_COIL_LOW`. Logical polarity statically checked. Physical device and K1 footprint pinout still require validation.
 
 ## Firmware proposal
 - Use on-board button GPIO35 short press to cycle M1..M4; onboard GPIO0 short press play/stop; long press toggles loop. SW1 arms recording, and physical microphone PTT controls record time. The UI is a proposal, firmware not implemented by this schematic.
