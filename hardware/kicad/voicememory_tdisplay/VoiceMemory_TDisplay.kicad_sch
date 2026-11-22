@@ -2,6 +2,121 @@
 (uuid "961b1c35-961b-461b-a61b-961b1c35961b") (paper "A3")
 (title_block (title "VoiceMemory v3 T-Display ESP32") (date "2026-11-22") (rev "DRAFT-V3A") (company "T-labDevelopment"))
 (lib_symbols
+(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "pwr"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 (symbol "Amplifier_Operational:MCP6002-xP"
 			(pin_names
 				(offset 0.127)
@@ -3756,5 +3871,15 @@
 (no_connect (at 101.6 226.06) (uuid "78b777e3-78b7-48b7-a8b7-78b777e378b7"))
 (no_connect (at 101.6 228.6) (uuid "2cca09f0-2cca-4cca-acca-2cca09f02cca"))
 (no_connect (at 101.6 248.92) (uuid "e356393d-e356-4356-a356-e356393de356"))
+(symbol (lib_id "power:PWR_FLAG") (at 127 203.2 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no)
+(uuid "92869c08-9286-4286-a286-92869c089286")
+(property "Reference" "#FLG01" (at 127 199.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Value" "PWR_FLAG" (at 127 206.01 0) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "65d14f6c-65d1-45d1-a5d1-65d14f6c65d1"))
+(instances (project "VoiceMemory_TDisplay" (path "/961b1c35-961b-461b-a61b-961b1c35961b" (reference "#FLG01") (unit 1)))))
+(global_label "GND_AUD" (shape passive) (at 127 203.2 180)
+(effects (font (size 0.9 0.9)) (justify right))
+(uuid "02a10345-02a1-42a1-a2a1-02a1034502a1")
+(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 127 203.2 0) (effects (font (size 0.9 0.9)) (hide yes))))
 (embedded_fonts no)
 )
