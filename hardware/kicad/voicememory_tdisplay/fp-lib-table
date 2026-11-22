@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Voice_Memory") (type "KiCad") (uri "${KIPRJMOD}/Voice_Memory.pretty") (options "") (descr "v2 reference RJ45 footprint, verify")))
