@@ -1,5 +1,7 @@
 # VoiceMemory v3 T-Display ESP32 / Simplified Schematic Draft
 
+> **Project boundary:** This is an independent **VoiceMemory_TDisplay_ESP32 Rev.A** design, NOT a revision of the CH32V003 prototype. Retain AZ8462-3 mechanical DPDT relay; do not adopt the PhotoMOS-only comparison design. See [PROJECT_SCOPE_JA.md](PROJECT_SCOPE_JA.md). Previous v1/v2 firmware, PCB validation and manufacturing approval do not carry over. The project is currently isolated by a Git branch and dedicated directory, not yet a distinct GitHub repository.
+
 **Status: schematic design DRAFT, no native KiCad ERC/DRC execution, no PCB production approval.**
 **2026-11-22 | Source: approved VoiceMemory v2 on `develop/v2` (SHA `d69a0664f0994633a5732053ea11fa3172edfa56`).**
 This v3 project is independent. **Do not alter the approved v2 files or its source ZIP.**
