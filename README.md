@@ -1,5 +1,7 @@
 # VoiceMemory v3 T-Display ESP32 / Simplified Schematic Draft
 
+> **Full capacitor recheck (2026-11-23):** The nine parts other than 1µF were reviewed for dimensions, capacitance, voltage rating, dielectric and shopping evidence; schematic instance metadata and BOM were updated. C14/C21/C22 are SL dielectric, not X7R. Akizuki 10µF 0805 shows 550 purchasable 20-piece packs; Rubycon 100µF THT shows "low stock" while 5510 units are listed as purchasable. Sengoku offers product/order listings but does not disclose confirmed purchasable piece counts. No electrical values, nets or footprints were changed. See [CAPACITOR_SIZE_AUDIT_JA.md](CAPACITOR_SIZE_AUDIT_JA.md).
+
 ## Capacitor sizing and sourcing (2026-11-23)
 
 **C11 and C19 (1µF)** are now **1206 imperial / 3216 metric**, using Rubycon 25MU105MA23216 PMLCAP (1µF/25V; Akizuki 107397). The remaining eight SMD capacitors are 0805 imperial / 2012 metric, the permitted minimum. Akizuki's former 0805 1µF stock (107549) was also independently confirmed in stock, so this enlargement was a requested design choice, not proof of 0805 unavailability. The polarized THT C23 remains Rubycon 100µF/16V (Akizuki 110271) with the 5mm diameter, 2.0mm lead pitch footprint. Part MPNs and vendors are synchronized between schematic instance properties and BOM. See [CAPACITOR_SIZE_AUDIT_JA.md](CAPACITOR_SIZE_AUDIT_JA.md). KiCad ERC/DRC and bench tests remain pending.
