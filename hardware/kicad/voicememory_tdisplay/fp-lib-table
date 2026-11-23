@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name "Voice_Memory") (type "KiCad") (uri "${KIPRJMOD}/Voice_Memory.pretty") (options "") (descr "v2 reference RJ45 footprint"))
-  (lib (name "VoiceMemory_TDisplay") (type "KiCad") (uri "${KIPRJMOD}/VoiceMemory_TDisplay.pretty") (options "") (descr "First-pass dedicated module and Zettler relay footprints"))
-)
