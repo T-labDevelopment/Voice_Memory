@@ -1,9 +1,9 @@
 Ref,Part,Value,Qty,Footprint,Status
 "J1","Connector:RJ45","MIC_IN","1","Voice_Memory:RJ45_8P8C_THT_15.91x15.10","VERIFY_MATCH"
 "J2","Connector:RJ45","RIG_OUT","1","Voice_Memory:RJ45_8P8C_THT_15.91x15.10","VERIFY_MATCH"
-"K1","Voice_Memory:AZ8462-3","AZ8462-3","1","Relay_THT:Relay_DPDT_Kemet_EC2_NU","VERIFY_MATCH"
+"K1","Voice_Memory:AZ8462-3","AZ8462-3","1","VoiceMemory_TDisplay:Relay_Zettler_AZ8462_DIP8","VERIFY_MATCH"
 "U3","Voice_Memory:TLP592A","TLP592A(F)","1","Package_DIP:DIP-6_W7.62mm","VERIFY_MATCH"
-"MOD1","VoiceMemory_TDisplay:TDisplay_ESP32_V1","LILYGO_TDisplay_ESP32","1","","SCHEMATIC_ONLY"
+"MOD1","VoiceMemory_TDisplay:TDisplay_ESP32_V1","LILYGO_TDisplay_ESP32","1","VoiceMemory_TDisplay:TTGO-T-Display","SCHEMATIC_ONLY"
 "U2","Voice_Memory:W25Q32RVCSJM","W25Q32RVCSJM","1","Package_SO:SOP-8_5.28x5.23mm_P1.27mm","VERIFY_MATCH"
 "SW1","Switch:SW_Push","REC_ARM","1","Button_Switch_THT:SW_PUSH_6mm_H4.3mm","VERIFY_MATCH"
 "U4","Amplifier_Operational:MCP6002-xP","MCP6002-I/P","1","Package_DIP:DIP-8_W7.62mm","VERIFY_MATCH"
