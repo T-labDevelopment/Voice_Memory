@@ -1,59 +1,85 @@
-# U2（W25Q32RVCSJM）のERCフットプリント未検出警告 — 修正記録
+# VoiceMemory T-Display ESP32 Rev.A — ERC U2 フットプリント警告の再修正（2026-11-24）
 
-- 記録日: 2026-11-24
-- 対象: VoiceMemory_TDisplay_ESP32 Rev.A（CH32V003版には適用しない）
-- 根拠: ユーザー提示のKiCad ERC画面。エラー0件、警告1件、テストしない項目4件
-- 作業ブランチ: `work/tdisplay-reva-u2-footprint-erc-2026-11-24`
-- **修正は適用済み、KiCad 10でのERC再実行は未実施**
+## 原因と過去の対応が失敗した理由
 
-## 原因
+ユーザー提示のKiCad 10 ERC画面では、エラー0件・警告1件・テストしない項目4件。
+警告はU2 `W25Q32RVCSJM` の未解決フットプリント。
 
-U2のフットプリント欄に指定されていた
+失敗した従来の指定：
+1. `Package_SO:SOP-8_5.28x5.23mm_P1.27mm`
+2. `Package_SO:SOIC-8_5.23x5.23mm_P1.27mm`
 
-```
-Package_SO:SOP-8_5.28x5.23mm_P1.27mm
-```
+両方ともユーザーのKiCad 10 `Package_SO` ライブラリからロードできなかった。
+公的に閲覧可能な古いKiCadライブラリ（GitHub mirror / kicad.github.ioは旧版の案内を含む）で「存在する」ことと、手元にインストールされているKiCad 10の標準 `Package_SO` に収録されていることは異なる。
 
-は正式なKiCad `Package_SO`フットプリント名ではなく、KiCad ERCが「フットプリントをライブラリに見つけられない」と警告していた。
+**このため、システム側ライブラリの名前変更で追従する方式を撤回し、実体のあるプロジェクトローカルの完全なフットプリントを使用する。**
 
-Winbond公式型番 `W25Q32RVCSJM` はSOP-8、208milを指定する。Winbond W25Q32RV Revision B (2024-01-29)の8-pin SOIC 208-mil（SS）は、ボディ寸法名目 D=5.28mm/D1=5.23mm、E=5.28mm/E1=5.23mm、ピンピッチ1.27mm、外脚間幅H=7.90mm。KiCad標準 `Package_SO` にはWinbond W25Q32JVに基づく以下の8ピンフットプリントが存在する。
+## 採用したフットプリント（回路定数・配線は無変更）
 
-```
-Package_SO:SOIC-8_5.23x5.23mm_P1.27mm
+```text
+VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm
 ```
 
-この標準フットプリントはW25Q系の208milパッケージに適合する設計候補であり、今までの実在しないカスタム表記に代えて採用する。
+実体：
+```text
+VoiceMemory_TDisplay.kicad_pro
+fp-lib-table
+VoiceMemory_TDisplay.pretty/
+  SOIC-8_5.23x5.23mm_P1.27mm.kicad_mod
+```
 
-## 変更したデータ
+`fp-lib-table` には既に、以下のプロジェクトライブラリが登録されている。
 
-| ファイル | 内容 |
-|---|---|
-| `VoiceMemory_TDisplay.kicad_sch` | U2のシンボルインスタンスと回路図内埋め込みシンボル定義の2箇所を新しい名前へ置換 |
-| `Voice_Memory.kicad_sym` | W25Q32RVCSJMシンボルの既定Footprintを同じ名前へ修正 |
-| `bom_draft.csv` | U2のFootprint列を新しい名前へ修正 |
+```lisp
+(lib (name "VoiceMemory_TDisplay") (type "KiCad") (uri "${KIPRJMOD}/VoiceMemory_TDisplay.pretty") (options "") (descr "..."))
+```
 
-U2の型番・SPI配線・端子番号・他部品値・TFT・リレー回路は変更していない。
+**標準ライブラリの存在チェックに頼らず**、上記3ファイルと `VoiceMemory_TDisplay.kicad_sch` が同じフォルダーにあれば解決可能な配置。
 
-## 判定と未実施
+配布フットプリントのデータは、KiCad公式のGitHub公開フットプリントを**図形・パッド構成を削除せず原文のまま同梱**したもの。これは独自の簡略化シンボルや仮の空フットプリントではない。
 
-- 標準フットプリント名がKiCad公開 `Package_SO`一覧に存在：**確認済**
-- パッケージ分類（208mil SOP-8）、ボディ寸法、8ピン1.27mmピッチ：**Winbondメーカー資料から確認済**
-- ファイル内の旧フットプリント参照：**更新済**
-- 対象3ファイルの参照名一致：**静的照合済**
-- KiCad 10の `ERC` で警告0件になること：**まだ実行しておらず未検証**
-- KiCad 10での基板パッド・3D外形・実装クリアランスの実機比較：**未実施**
-- 現在の「テストしない項目（4）」はERCルール設定で意図的にチェック対象外となる4分類であり、修正された警告1件の内訳には含めない。内容を確認したうえで検査対象へ戻すか判断する。
+- 元の公開データ：
+  https://github.com/KiCad/kicad-footprints/blob/master/Package_SO.pretty/SOIC-8_5.23x5.23mm_P1.27mm.kicad_mod
+- 出典Blob SHA-1：
+  `d1999ca5e8ce259e69e2d75c363f95640f15a802`
+- KiCad公式ライブラリの著作権・使用許諾：
+  https://www.kicad.org/libraries/license/
+- 8パッド（1～8）、1.27mmピッチ、左右X=±3.6mm、パッド寸法1.6×0.6mm（roundrect）。Winbond W25Q32RVCSJMの208mil SOP-8の実装候補。
+- KiCad 5系由来の公式 `(module ...)` レガシーフットプリント構文を保持。**KiCad 10 GUIによる読み込み、ライブラリ移行・PCB上の動作検証は未実施。** もし現行環境で構文移行を求められた場合はFootprint Editorで「名前をつけて保存」して最新版形式に変換する。
+- 元データの3Dモデル参照はそのまま。存在しない場合はKiCad 10向けの3Dモデルを再設定する。**ERCの未検出警告とは別**の問題。
 
-## 端末上の再確認手順
+## 実際に変更したファイル
 
-1. このブランチのデータをZIPで取得し、展開する。
-2. KiCad 10の `VoiceMemory_TDisplay.kicad_pro` を開く。
-3. 回路図でU2のシンボルプロパティを開き、`Package_SO:SOIC-8_5.23x5.23mm_P1.27mm` と表示されることを確認。
-4. ERCを再実行し、「フットプリントが見つからない」警告が解消することを確認。残る違反があれば別途対応。
-5. PCB設計開始前にU2のパッド番号と位置、Pin1マーク、実際に調達した`W25Q32RVCSJM`の外形（208mil）を比較。
+1. `VoiceMemory_TDisplay.pretty/SOIC-8_5.23x5.23mm_P1.27mm.kicad_mod` — KiCad公式完全フットプリントを追加。
+2. `VoiceMemory_TDisplay.kicad_sch` — U2インスタンスと埋め込みシンボル定義（計2箇所）をローカル指定に変更。
+3. `Voice_Memory.kicad_sym` — U2標準シンボルのフットプリント指定を一致させた。
+4. `bom_draft.csv` — U2フットプリントの指定名を一致させた。
 
-## 出典
+`fp-lib-table` は既存のローカル `VoiceMemory_TDisplay` ライブラリ定義が適切なので**変更不要**。他のコンデンサ、AZ8462-3リレー、GPIO、ネット接続、無線機・マイク対応仕様は変更しない。
 
-- Winbond製品情報（`W25Q32RVCSJM`, SOP-8, 208mil）: https://www.winbond.com/hq/product/code-storage-flash/qspi-nor/w25q-rv/?__locale=en&partNo=W25Q32RVCSJM
-- Winbond W25Q32RVデータシート Rev.B（2024-01-29、Section 10.2 p.76）: https://resources.ampheo.com/static/datasheets/winbond-electronics-corporation/w25q32rvsnjq.pdf
-- KiCad公開標準フットプリント `Package_SO` 一覧: https://kicad.github.io/footprints/Package_SO.html
+## 確認したこと／残る確認
+
+静的照合で確認できること：
+- `fp-lib-table` にローカルライブラリ定義が存在。
+- 指定先 `.kicad_mod` の実ファイルがGitに存在。
+- フットプリント内のパッド番号1～8が一意で全て存在。
+- 回路図／シンボルライブラリ／BOMのフットプリント名が一致。
+- 既存のネット・部品定数は一切変更していない。
+
+未実施：
+- **KiCad 10での実際のライブラリロード・ERC再実行**（本環境にKiCad CLI無し）。
+- PCBのフットプリント更新・DRC・現物端子1番・極性と外形照合。
+- 無効化されたERC項目4件の内容確認。
+
+## ユーザー環境での確認
+
+1. 新しい作業ブランチのZIPをダウンロードして、**フォルダー構造を保ったまま全ファイルを展開**する。
+2. `VoiceMemory_TDisplay.kicad_pro` をプロジェクトとして開く。
+3. 回路図U2のプロパティで `VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm` を確認。
+4. **設定 → フットプリントライブラリを管理 → プロジェクト固有ライブラリ**で `VoiceMemory_TDisplay` と `${KIPRJMOD}/VoiceMemory_TDisplay.pretty` を確認。
+5. フットプリント選択画面から `VoiceMemory_TDisplay` ライブラリを開き、SOIC-8の8個のランドが表示されるか確認。
+6. ERCを再実行する。U2の警告が消えた場合でも、残る警告・除外項目は別途確認。
+
+## 最終判定
+
+フットプリント解決先の実ファイルまで同梱した初期修正版は完成。ただし**ユーザーのKiCad 10でERC警告0件になったことは未確認**。
