@@ -1,5 +1,7 @@
 # VoiceMemory_TDisplay_ESP32 Rev.A｜LILYGO T-Display簡易回路設計
 
+> **U2のERC警告修正（2026-11-24）:** W25Q32RVCSJMのフットプリント名がKiCad `Package_SO` ライブラリに存在しなかったため、Winbond 208mil SOP-8に適合する標準 `Package_SO:SOIC-8_5.23x5.23mm_P1.27mm` へ統一しました。回路図・シンボルライブラリ・BOMを更新。KiCad 10でのERC再実行は未実施。詳細は [ERC_U2_FOOTPRINT_FIX_JA.md](ERC_U2_FOOTPRINT_FIX_JA.md)。
+
 > **回路全体・部品追加削除の再監査（2026-11-23）：** [CIRCUIT_COMPONENT_AUDIT_JA.md](CIRCUIT_COMPONENT_AUDIT_JA.md) と [COMPONENT_CHANGE_REVIEW.csv](COMPONENT_CHANGE_REVIEW.csv) を追加しました。無条件の削除部品はなし。MIC_AUDIO経由で給電するエレクトレットマイクは録音時にバイアス喪失の恐れがあります。R6/R7の録音増幅率約5.68倍とR18によるPTT_GND共通化も実機確認が必要です。部品追加は対象マイク・無線機条件確定後に限定し、回路図・BOMは今回は無変更です。
 
 > **コンデンサ全容量の再監査（2026-11-23）：** 1µF以外の9個の採用品も容量・定格電圧・誘電特性・実寸・販売確認範囲を再照合し、KiCad部品属性とBOMに反映済みです。C14/C21/C22の温度特性はSLと確認。C18/C20（10µF）は秋月で20個入り550パック購入可能、C23（100µF）は「在庫僅少」表示ながら通販購入可能数5510個。千石採用品は注文欄を確認したが実在庫数量は不明です。容量・フットプリントは変更せず、[監査詳細](CAPACITOR_SIZE_AUDIT_JA.md) に未確認事項を明記しています。
