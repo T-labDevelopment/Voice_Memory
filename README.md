@@ -1,6 +1,6 @@
 # VoiceMemory v3 T-Display ESP32 / Simplified Schematic Draft
 
-> **U2 KiCad ERC footprint warning fix (2026-11-24):** Replaced the nonexistent `Package_SO:SOP-8_5.28x5.23mm_P1.27mm` with the standard Winbond-compatible `Package_SO:SOIC-8_5.23x5.23mm_P1.27mm` in schematic, component symbol library and BOM. No electrical connections or other footprints changed. KiCad 10 ERC has not yet been rerun. Details: [ERC_U2_FOOTPRINT_FIX_JA.md](ERC_U2_FOOTPRINT_FIX_JA.md).
+> **U2 KiCad ERC warning rework (2026-11-24):** Both previously tried `Package_SO` names failed to resolve in the user's KiCad 10 installation. The complete official 8-pad KiCad footprint is now included in the project-local `VoiceMemory_TDisplay.pretty` library. U2 uses `VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm` in schematic, symbol and BOM. This no longer relies on the global `Package_SO` library, but on-machine KiCad 10 ERC verification is still pending. See [ERC_U2_FOOTPRINT_FIX_JA.md](ERC_U2_FOOTPRINT_FIX_JA.md).
 
 > **Whole-circuit component audit (2026-11-23):** Added [CIRCUIT_COMPONENT_AUDIT_JA.md](CIRCUIT_COMPONENT_AUDIT_JA.md) and [COMPONENT_CHANGE_REVIEW.csv](COMPONENT_CHANGE_REVIEW.csv). No unconditional removals. An audio-line-biased electret microphone loses its DC bias while K1 isolates the radio during recording. Recording gain is ~5.68; R18 bridges PTT and circuit grounds. These are conditional design risks requiring hardware/radio-specific tests. No changes to the schematic, BOM or footprints on this audit branch.
 
