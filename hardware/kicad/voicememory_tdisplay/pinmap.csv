@@ -14,6 +14,6 @@ Name,GPIO,Dir,Net,Notes
 "TFT_CS","5","OUT","ONBOARD","Do not reuse"
 "TFT_DC","16","OUT","ONBOARD","Do not reuse"
 "TFT_RST","23","OUT","ONBOARD","Do not reuse"
-"TFT_BL","4","OUT","ONBOARD","Do not reuse"
+"TFT_BL","4","OUT","ONBOARD","Built-in TFT backlight; all visual indicators on internal LCD"
 "BTN0","0","IN","ONBOARD","Boot strapping"
 "BTN35","35","IN","ONBOARD","onboard button"
