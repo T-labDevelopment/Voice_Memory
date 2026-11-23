@@ -1,0 +1,46 @@
+﻿Reference,Footprint,X_mm,Y_mm,Angle_deg,Side,Placement,Notes
+J1,Voice_Memory:RJ45_8P8C_THT_15.91x15.10,149.1,63.6,90,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+J2,Voice_Memory:RJ45_8P8C_THT_15.91x15.10,149.1,83.1,90,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+MOD1,VoiceMemory_TDisplay:TTGO-T-Display,112.808,56.702,0,F.Cu,Outside module,外周
+C11,Capacitor_SMD:C_1206_3216Metric,113.8,87.7,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C12,Capacitor_SMD:C_0805_2012Metric,113.8,71.8,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C14,Capacitor_SMD:C_0805_2012Metric,113.8,66.5,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C15,Capacitor_SMD:C_0805_2012Metric,109.9,77.1,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C16,Capacitor_SMD:C_0805_2012Metric,109.9,71.8,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C18,Capacitor_SMD:C_0805_2012Metric,106,66.5,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C19,Capacitor_SMD:C_1206_3216Metric,121.6,82.4,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C20,Capacitor_SMD:C_0805_2012Metric,106,87.7,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+C21,Capacitor_SMD:C_0805_2012Metric,141.05,62.4,90,F.Cu,Outside module,外周
+C22,Capacitor_SMD:C_0805_2012Metric,141.55,94,90,F.Cu,Outside module,外周
+C23,Capacitor_THT:CP_Radial_D5.0mm_P2.00mm,149.3,110.5,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+D1,Diode_SMD:D_SOD-123,139.9,109.6,0,F.Cu,Outside module,外周
+K1,VoiceMemory_TDisplay:Relay_Zettler_AZ8462_DIP8,149.7,101,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+Q1,Package_TO_SOT_THT:TO-92_Inline,130.7,102.5,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+Q2,Package_TO_SOT_THT:TO-92_Inline,136.85,102.5,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+R1,Resistor_SMD:R_0805_2012Metric,106,71.8,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R10,Resistor_SMD:R_0805_2012Metric,113.8,77.1,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R11,Resistor_SMD:R_0805_2012Metric,117.7,93,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R12,Resistor_SMD:R_0805_2012Metric,113.8,93,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R13,Resistor_SMD:R_0805_2012Metric,121.6,77.1,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R14,Resistor_SMD:R_0805_2012Metric,117.7,77.1,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R15,Resistor_SMD:R_0805_2012Metric,117.7,98.3,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R16,Resistor_SMD:R_0805_2012Metric,121.6,98.3,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R17,Resistor_SMD:R_0805_2012Metric,117.7,87.7,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R18,Resistor_SMD:R_0805_2012Metric,121.6,71.8,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R19,Resistor_SMD:R_0805_2012Metric,106,82.4,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R2,Resistor_SMD:R_0805_2012Metric,113.8,98.3,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R20,Resistor_SMD:R_0805_2012Metric,117.7,82.4,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R21,Resistor_SMD:R_0805_2012Metric,106,77.1,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R22,Resistor_SMD:R_0805_2012Metric,121.6,87.7,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R3,Resistor_SMD:R_0805_2012Metric,121.6,93,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R4,Resistor_SMD:R_0805_2012Metric,109.9,66.5,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R5,Resistor_SMD:R_0805_2012Metric,109.9,82.4,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R6,Resistor_SMD:R_0805_2012Metric,121.6,66.5,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R7,Resistor_SMD:R_0805_2012Metric,117.7,66.5,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R8,Resistor_SMD:R_0805_2012Metric,117.7,71.8,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+R9,Resistor_SMD:R_0805_2012Metric,113.8,82.4,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
+RV2,Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical,130.6,85.9,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+SW1,Button_Switch_THT:SW_PUSH_6mm_H4.3mm,131,77.5,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+U2,VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm,135.3,95.9,0,F.Cu,Outside module,外周
+U3,Package_DIP:DIP-6_W7.62mm,130.7,68.1,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+U4,Package_DIP:DIP-8_W7.62mm,130.7,56.1,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
