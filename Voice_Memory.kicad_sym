@@ -127,7 +127,7 @@
     (on_board yes)
     (property "Reference" "U" (at -10.16 12.7 0) (effects (font (size 1.27 1.27)) (justify left)))
     (property "Value" "W25Q32RVCSJM" (at 10.16 12.7 0) (effects (font (size 1.27 1.27)) (justify right)))
-    (property "Footprint" "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
     (property "Datasheet" "https://www.winbond.com/hq/product/code-storage-flash/qspi-nor/w25q-rv/?__locale=en&partNo=W25Q32RVCSJM" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
     (property "Description" "Winbond W25Q32RVCSJM 32Mbit SPI NOR, 2.7-3.6V, SOP-8 208mil; SPI 1/2/3/4/5/6/7/8 pinout" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
     (property "ki_keywords" "SPI NOR AT25SF321B flash" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
