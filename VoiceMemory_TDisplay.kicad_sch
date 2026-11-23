@@ -1890,7 +1890,7 @@
 					(justify right)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm"
+			(property "Footprint" "VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2878,7 +2878,7 @@
 (uuid "ed642ab3-ed64-4d64-ad64-ed642ab3ed64")
 (property "Reference" "U2" (at 166.37 219.71 0) (effects (font (size 1.27 1.27))))
 (property "Value" "W25Q32RVCSJM" (at 166.37 222.25 0) (effects (font (size 1.0 1.0))))
-(property "Footprint" "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" (at 166.37 228.6 0) (effects (font (size 1.0 1.0)) (hide yes)))
+(property "Footprint" "VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm" (at 166.37 228.6 0) (effects (font (size 1.0 1.0)) (hide yes)))
 (property "Datasheet" "" (at 166.37 228.6 0) (effects (font (size 1.0 1.0)) (hide yes)))
 
 (pin "1" (uuid "2989c167-2989-4989-a989-2989c1672989"))
