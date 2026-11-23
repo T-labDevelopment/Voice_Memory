@@ -71,3 +71,12 @@ This v3 project is independent. **Do not alter the approved v2 files or its sour
 - Winbond W25Q32RVCSJM: https://www.winbond.com/hq/product/code-storage-flash/qspi-nor/w25q-rv/?__locale=en&partNo=W25Q32RVCSJM
 - Toshiba TLP592A: https://toshiba.semicon-storage.com/info/TLP592A_datasheet_ja_20190624.pdf?did=17082&prodName=TLP592A
 - AZ8462-3 coil 46.7mA: https://www.digikey.jp/en/products/detail/american-zettler/AZ8462-3/18340735
+
+## All indicators consolidated to onboard TFT
+
+**Requirement:** Every user-facing status indicator is rendered exclusively on the built-in 240×135 ST7789 TFT of the classic LILYGO T-Display. Status includes M1–M4 selection, REC/PLAY, loop, elapsed time, message saved, auto/manual PTT request, warnings and detected errors. No separate status LED, display module, 7-segment module, display driver or indicator GPIO is added.
+
+The internal LED of TLP592A (U3, net `PTT_LED_A`) is a PhotoMOS control element—not a visible indicator. D1 is the relay flyback diode. Keep both. Preserve AZ8462-3 (K1) mechanical relay and the existing control wiring.
+
+For screen-state requirements and priorities, see [TFT_DISPLAY_SPEC_JA.md](TFT_DISPLAY_SPEC_JA.md). TFT state indications are software commands, not verified RF transmission or relay physical feedback; the display is unavailable when the module is powered off. The hardware remains untested.
+
