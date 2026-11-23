@@ -2,7 +2,7 @@
 
 ## Capacitor sizing and sourcing (2026-11-23)
 
-All 10 SMD capacitor instances remain **0805 imperial / 2012 metric**, the minimum permitted package. Both Akizuki and Sengoku listings together cover every required SMD value; no 1206 fallback is necessary at present. The existing polarized THT C23 is now 100uF/16V (Rubycon 16PX100MEFC5X11, Akizuki 110271), mechanically matching the retained 5mm diameter, 2.0mm lead pitch footprint. Part MPNs, vendors and URLs are reflected in the schematic instance properties and BOM. See [CAPACITOR_SIZE_AUDIT_JA.md](CAPACITOR_SIZE_AUDIT_JA.md). KiCad ERC/DRC and bench tests are still pending.
+**C11 and C19 (1µF)** are now **1206 imperial / 3216 metric**, using Rubycon 25MU105MA23216 PMLCAP (1µF/25V; Akizuki 107397). The remaining eight SMD capacitors are 0805 imperial / 2012 metric, the permitted minimum. Akizuki's former 0805 1µF stock (107549) was also independently confirmed in stock, so this enlargement was a requested design choice, not proof of 0805 unavailability. The polarized THT C23 remains Rubycon 100µF/16V (Akizuki 110271) with the 5mm diameter, 2.0mm lead pitch footprint. Part MPNs and vendors are synchronized between schematic instance properties and BOM. See [CAPACITOR_SIZE_AUDIT_JA.md](CAPACITOR_SIZE_AUDIT_JA.md). KiCad ERC/DRC and bench tests remain pending.
 
 
 > **First editable KiCad Rev.A handoff:** [INITIAL_DESIGN_HANDOFF_JA.md](INITIAL_DESIGN_HANDOFF_JA.md). The 24-pad T-Display header numbering and dedicated AZ8462 DIP relay footprint have been corrected for this branch. Official ERC/DRC and bench checks remain unrun.
