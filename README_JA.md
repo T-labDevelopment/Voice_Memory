@@ -1,6 +1,6 @@
 # VoiceMemory_TDisplay_ESP32 Rev.A｜LILYGO T-Display簡易回路設計
 
-> **U2のERC警告修正（2026-11-24）:** W25Q32RVCSJMのフットプリント名がKiCad `Package_SO` ライブラリに存在しなかったため、Winbond 208mil SOP-8に適合する標準 `Package_SO:SOIC-8_5.23x5.23mm_P1.27mm` へ統一しました。回路図・シンボルライブラリ・BOMを更新。KiCad 10でのERC再実行は未実施。詳細は [ERC_U2_FOOTPRINT_FIX_JA.md](ERC_U2_FOOTPRINT_FIX_JA.md)。
+> **U2のERC警告・再修正（2026-11-24）:** 前回指定の`Package_SO:SOIC-8_5.23x5.23mm_P1.27mm`は、ユーザーのKiCad 10ライブラリにも存在せず警告が残りました。**今回はKiCad公式の完全な8パッドフットプリントをプロジェクト内の`VoiceMemory_TDisplay.pretty`へ同梱**し、U2の指定を`VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm`に修正。KiCadのグローバルライブラリ収録状況に依存しない構成です。ユーザーKiCad 10でのERC再実行は未実施。[詳細](ERC_U2_FOOTPRINT_FIX_JA.md)。
 
 > **回路全体・部品追加削除の再監査（2026-11-23）：** [CIRCUIT_COMPONENT_AUDIT_JA.md](CIRCUIT_COMPONENT_AUDIT_JA.md) と [COMPONENT_CHANGE_REVIEW.csv](COMPONENT_CHANGE_REVIEW.csv) を追加しました。無条件の削除部品はなし。MIC_AUDIO経由で給電するエレクトレットマイクは録音時にバイアス喪失の恐れがあります。R6/R7の録音増幅率約5.68倍とR18によるPTT_GND共通化も実機確認が必要です。部品追加は対象マイク・無線機条件確定後に限定し、回路図・BOMは今回は無変更です。
 
