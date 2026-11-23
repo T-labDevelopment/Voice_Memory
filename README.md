@@ -1,5 +1,10 @@
 # VoiceMemory v3 T-Display ESP32 / Simplified Schematic Draft
 
+## Capacitor sizing and sourcing (2026-11-23)
+
+All 10 SMD capacitor instances remain **0805 imperial / 2012 metric**, the minimum permitted package. Both Akizuki and Sengoku listings together cover every required SMD value; no 1206 fallback is necessary at present. The existing polarized THT C23 is now 100uF/16V (Rubycon 16PX100MEFC5X11, Akizuki 110271), mechanically matching the retained 5mm diameter, 2.0mm lead pitch footprint. Part MPNs, vendors and URLs are reflected in the schematic instance properties and BOM. See [CAPACITOR_SIZE_AUDIT_JA.md](CAPACITOR_SIZE_AUDIT_JA.md). KiCad ERC/DRC and bench tests are still pending.
+
+
 > **First editable KiCad Rev.A handoff:** [INITIAL_DESIGN_HANDOFF_JA.md](INITIAL_DESIGN_HANDOFF_JA.md). The 24-pad T-Display header numbering and dedicated AZ8462 DIP relay footprint have been corrected for this branch. Official ERC/DRC and bench checks remain unrun.
 
 > **Project boundary:** This is an independent **VoiceMemory_TDisplay_ESP32 Rev.A** design, NOT a revision of the CH32V003 prototype. Retain AZ8462-3 mechanical DPDT relay; do not adopt the PhotoMOS-only comparison design. See [PROJECT_SCOPE_JA.md](PROJECT_SCOPE_JA.md). Previous v1/v2 firmware, PCB validation and manufacturing approval do not carry over. The project is currently isolated by a Git branch and dedicated directory, not yet a distinct GitHub repository.
