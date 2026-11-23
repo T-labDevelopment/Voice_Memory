@@ -1,5 +1,12 @@
 # VoiceMemory_TDisplay_ESP32 Rev.A｜LILYGO T-Display簡易回路設計
 
+## コンデンサ調達・サイズ確定方針（2026-11-23）
+
+**最小サイズは0805（2012メトリック）です。** 秋月・千石の販売情報を全11部品に照合し、10点のSMDは全て0805のまま調達候補を割り当てました。0805で入手できない値があれば1206以上へ拡大する運用ですが、今回は該当ありません。既存THT C23は秋月販売コード110271の100µF16Vに指定し、既存5mm径・2mmピッチのランド割当を維持します。
+
+`bom_draft.csv`の個別型番・販売店・商品URLと、`VoiceMemory_TDisplay.kicad_sch`の部品プロパティを更新しました。詳細と販売終了の除外履歴は [CAPACITOR_SIZE_AUDIT_JA.md](CAPACITOR_SIZE_AUDIT_JA.md) を参照。PCB未作成、正式ERC/DRC未実施、実在庫個数は発注時再確認。
+
+
 > **KiCad初期設計データ（2026-11-23）：** [INITIAL_DESIGN_HANDOFF_JA.md](INITIAL_DESIGN_HANDOFF_JA.md)。T-Display端子番号はLILYGOの公式KiCadフットプリントに合わせて修正済み。AZ8462-3には専用THTフットプリントを設定済み。正式ERC、DRC、実機試験は未実施。
 
 > **プロジェクト区分（確定）**：本回路は既存のCH32V003試作版とは別製品・別ファームウェアとして管理する **VoiceMemory_TDisplay_ESP32 Rev.A** の設計ドラフトです。AZ8462-3機械式リレーを維持し、PhotoMOS置換案は標準に採用しません。詳細は [PROJECT_SCOPE_JA.md](PROJECT_SCOPE_JA.md) を参照してください。既存v1/v2の検証・製造承認を本製品へ流用しません。現在はGitHubリポジトリ内の専用ブランチによる暫定分離であり、専用リポジトリの作成・移行は未実施です。
