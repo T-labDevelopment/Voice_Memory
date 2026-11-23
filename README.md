@@ -83,6 +83,12 @@ This v3 project is independent. **Do not alter the approved v2 files or its sour
 - Toshiba TLP592A: https://toshiba.semicon-storage.com/info/TLP592A_datasheet_ja_20190624.pdf?did=17082&prodName=TLP592A
 - AZ8462-3 coil 46.7mA: https://www.digikey.jp/en/products/detail/american-zettler/AZ8462-3/18340735
 
+## Factory / ADONIS microphone scope (2026-11-23)
+
+Target microphones are radio manufacturers' **genuine OEM microphones** and **ADONIS microphones**. The board uses a dedicated 8P8C/RJ45 physical port with an ADONIS-like 8-pin logical signal convention; a suitable physical and electrical conversion cable is needed and no OEM radio/microphone is assumed plug-compatible.
+
+The separate microphone DC power feed (`MIC_DC_PASS`, pin 8) remains connected between the radio and microphone through all relay states. Do not merge this line with the ESP32's 3.3V/5V rails. Battery-powered ADONIS microphones and ADONIS models powered through suitable D-series cables are candidates. Genuine dynamic microphones may work without bias. Genuine electret microphones powered via the **MIC_AUDIO signal itself** can lose bias when K1 isolates the rig during record; no blanket all-OEM compatibility is claimed. See [MICROPHONE_COMPATIBILITY_JA.md](MICROPHONE_COMPATIBILITY_JA.md). No circuitry changed pending model-specific validation.
+
 ## All indicators consolidated to onboard TFT
 
 **Requirement:** Every user-facing status indicator is rendered exclusively on the built-in 240×135 ST7789 TFT of the classic LILYGO T-Display. Status includes M1–M4 selection, REC/PLAY, loop, elapsed time, message saved, auto/manual PTT request, warnings and detected errors. No separate status LED, display module, 7-segment module, display driver or indicator GPIO is added.
