@@ -1,0 +1,60 @@
+{
+  "source": "VoiceMemory_TDisplay-2026-11-24_164508.zip",
+  "board_original_mm": [
+    64.4,
+    104.3
+  ],
+  "board_new_mm": [
+    64.4,
+    100.0
+  ],
+  "delta_length_mm": -4.3,
+  "moved_footprints": {
+    "REF**_86.360_133.350": [
+      86.36,
+      133.35,
+      86.36,
+      129.05
+    ],
+    "SW5_118.872_132.949": [
+      118.872,
+      132.949,
+      118.872,
+      128.649
+    ],
+    "REF**_139.700_133.350": [
+      139.7,
+      133.35,
+      139.7,
+      129.05
+    ],
+    "SW4_100.918_132.949": [
+      100.918,
+      132.949,
+      100.918,
+      128.649
+    ]
+  },
+  "moved_silk": [
+    "CH3",
+    "CH4"
+  ],
+  "modified_copper_segments": 11,
+  "moved_ground_vias": [
+    [
+      133.096,
+      136.398,
+      133.096,
+      132.098
+    ],
+    [
+      92.202,
+      135.128,
+      92.202,
+      130.828
+    ]
+  ],
+  "removed_stale_filled_polygons": 13,
+  "zones_needing_refill": 1,
+  "note": "KiCad B (refill zones) and then DRC required. Old PCB.zip Gerbers are NOT valid for 100mm PCB."
+}

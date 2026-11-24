@@ -1,0 +1,16 @@
+{
+  "source_zip": "VoiceMemory_TDisplay-2026-11-24_164508.zip",
+  "source_sha256": "f81d32c1ff5159133aed2fd2ecadfa6d76ce97ed69fa2263f3d4d98e78146a19",
+  "kicad_pcb_sha256": "6852c0dccb71434c19dfc291ec4d290ac592209e437e126f5d31b25d5822bab8",
+  "unchanged_schematic_sha256": "3cb12a475c987339cb1cd60977194a1e6f78df3605b00492eb9bc752e16b06d7",
+  "new_size_mm": [
+    64.4,
+    100.0
+  ],
+  "modified_files": [
+    "VoiceMemory_TDisplay.kicad_pcb",
+    "VALIDATION_STATUS.json",
+    "README_100MM_JA.md",
+    "100MM_CHANGE_AUDIT.json"
+  ]
+}
