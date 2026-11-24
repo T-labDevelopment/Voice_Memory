@@ -1,0 +1,25 @@
+﻿pin,symbol_name,pcb_net,role,status
+1,5V_USB,5V_USB_SENSE_SRC,5V monitor source (not 5V power input),PASS
+2,GND5,GND_AUD,ground,PASS
+3,GPIO27,SW_CH4_N,CH4 select,PASS
+4,GPIO26,AUTO_PTT_EN,automated PTT output,PASS
+5,GPIO25,AUDIO_DAC,DAC1 audio output,PASS
+6,GPIO33,RELAY_EN,relay driver output,PASS
+7,GPIO32,AUDIO_ADC,ADC1 CH4 audio input,PASS
+8,GPIO39,PTT_SENSE_HIGH,PTT input,PASS
+9,GPIO38,USB_SENSE_ADC,ADC1 CH2 USB input,PASS
+10,GPIO37,unconnected-(MOD1-GPIO37-Pad10),NC,PASS
+11,GPIO36,SW_WAKE_N,RTC GPIO0 wake button input,PASS
+12,3V3_B,+3V3,3.3V supply,PASS
+13,3V3_A,+3V3,3.3V supply,PASS
+14,GND4,GND_AUD,ground,PASS
+15,GND3,GND_AUD,ground,PASS
+16,GPIO12,unconnected-(MOD1-GPIO12-Pad16),NC boot strapping pin,PASS
+17,GPIO13,SW_REC_N,REC input,PASS
+18,GPIO15,unconnected-(MOD1-GPIO15-Pad18),NC boot strapping pin,PASS
+19,GPIO2,unconnected-(MOD1-GPIO2-Pad19),NC boot strapping pin,PASS
+20,GPIO17,SW_CH3_N,CH3 select,PASS
+21,GPIO22,SW_CH2_N,CH2 select,PASS
+22,GPIO21,SW_CH1_N,CH1 select,PASS
+23,GND2,GND_AUD,ground,PASS
+24,GND1,GND_AUD,ground,PASS

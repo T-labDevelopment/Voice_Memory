@@ -1,0 +1,78 @@
+{
+  "README.md": {
+    "sha256": "b71bf42cec3dba08de4265f14731a71808a9f5f60edbd0931e2ce76d0221fcc3",
+    "size": 963
+  },
+  "releases/esp32-tdisplay-preorder-pin-audit-2026-11-24/DRC_2026-11-24_234129.rpt": {
+    "sha256": "8089e506dab230b44e64e9c44114a5152ca4485428a120c7adf230965c60ffc2",
+    "size": 521
+  },
+  "releases/esp32-tdisplay-preorder-pin-audit-2026-11-24/README.md": {
+    "sha256": "7a60e642a32c24fbe978bfe25446ed454101bad7cc05a8fb5bca0140b1429087",
+    "size": 889
+  },
+  "releases/esp32-tdisplay-preorder-pin-audit-2026-11-24/ERC_2026-11-24_230945.rpt": {
+    "sha256": "69a6a1aee865e8109d9b4aa642a3ea55be6f6f77ce58d76b69ba74f550be53f8",
+    "size": 357
+  },
+  "hardware/source-archives/tdisplay-preorder-2026-11-24/VoiceMemory_TDisplay-2026-11-24_234138.zip": {
+    "sha256": "188de5bfed730062eddecdf40f88ef4d4e4edc54cd06bbaf31864980c419eac3",
+    "size": 197437
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/VoiceMemory_TDisplay.kicad_pcb": {
+    "sha256": "7f14856e83837b9459465705991353cf7a47b52e9c55772922afb8944d74bd98",
+    "size": 708839
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/VoiceMemory_TDisplay.kicad_sch": {
+    "sha256": "3cb12a475c987339cb1cd60977194a1e6f78df3605b00492eb9bc752e16b06d7",
+    "size": 205122
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/VoiceMemory_TDisplay.kicad_sym": {
+    "sha256": "ae6d8a58526a683364869a7a13bc13a4f85692242f92df0c8fd5103465fea0cf",
+    "size": 4632
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/sym-lib-table": {
+    "sha256": "8f8a67020270b727d0fe91498fe57772d028c9361ea529f86460732a6b9a0e08",
+    "size": 301
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/Voice_Memory.kicad_sym": {
+    "sha256": "7b63b5beaa87fc88e6e14afcb1817ead6903bcd696399c1606cce31a7ee69d5f",
+    "size": 22081
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/VoiceMemory_TDisplay.kicad_pro": {
+    "sha256": "5278983ea31473d60367c46dd149dec01996ed9a2d5f0eac52dd56e6a70559aa",
+    "size": 16777
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/MODULE_PINMAP_AUDIT_2026-11-24.csv": {
+    "sha256": "c8060a95d179a1642ac16d4553efa2e37216bc8b95a134d233c4c6c8698fce05",
+    "size": 1079
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/PIN_AUDIT_2026-11-24_JA.md": {
+    "sha256": "8e59dcf1a1aff1d52e6cd8d3d99143a2be2bd49006e38ed56e64e2e04d5841cc",
+    "size": 2763
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/README.md": {
+    "sha256": "f98747f9da0f545ba1d5b3486def61728f722295b8551f47490e2054109460b3",
+    "size": 932
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/fp-lib-table": {
+    "sha256": "1912809735bdd3c2525d2baec0f367b9076feb14601da752ca1869d77f29031d",
+    "size": 309
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/VoiceMemory_TDisplay.pretty/TTGO-T-Display.kicad_mod": {
+    "sha256": "b98254e14320fcccfa7c26557fe15f144c42436375d39dfb3bec44fdff531eea",
+    "size": 4670
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/VoiceMemory_TDisplay.pretty/SW_PUSH-12mm.kicad_mod": {
+    "sha256": "2293e833475e974765992632f68b7fcb4dd18b4534de20cc076b2fc4b8e1e5b0",
+    "size": 2254
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/VoiceMemory_TDisplay.pretty/Relay_Zettler_AZ8462_DIP8.kicad_mod": {
+    "sha256": "798a668a55f9f1a7516cc6158f4975b13a02f21f9b51aeab85b61796baa3c0ad",
+    "size": 3496
+  },
+  "hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod": {
+    "sha256": "7fb278927aa8ec3b0b66ed42ad3556316ad05d5981ad9246b7e93ddc92ee2f01",
+    "size": 5401
+  }
+}

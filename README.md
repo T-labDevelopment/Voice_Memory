@@ -1,10 +1,15 @@
-# Voice_Memory — ESP32 T-Display版を主開発
+# VoiceMemory — ESP32 T-Display Prototype（主開発）
 
-**今後の主開発対象はESP32 T-Display（16MB Flash）版です。**
+**主開発対象：ESP32 T-Display 16MB版。** 旧CH32V003設計は履歴として保持し、混在させない。
 
-- **現在の外形短縮案（100.0mm、未発注）：** [Rev.A 100mm版](releases/esp32-tdisplay-reva-100mm-2026-11-24/README.md)
-- **既発注のPrototype（104.3mm）：** [発注時の正本とGerber](releases/esp32-tdisplay-prototype-ordered-2026-11-24/README.md)
-- **発注前の16:11設計基準：** [初期Rev.A検証基準](releases/esp32-tdisplay-reva-2026-11-24/README.md)
-- **旧CH32V003版：** v1/v2の設計・製造履歴として保全する。ESP32側の変更では旧版を変更しない。
+## 直近の発注準備データ
 
-100mm版はGNDゾーン再充填・KiCad 10 DRC再実行・Gerber再生成が必要な設計変更案です。旧発注Gerberは使用できません。`main`は変更せず、作業ブランチで管理します。
+- [2026-11-24 23:41版 KiCad / MPUピン検証](hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/README.md)
+- [MPU 24ピン接続監査](hardware/kicad/voicememory_tdisplay/preorder_pin_verified_2026-11-24/PIN_AUDIT_2026-11-24_JA.md)
+- [製造直前版受領・検証記録](releases/esp32-tdisplay-preorder-pin-audit-2026-11-24/README.md)
+
+2026-11-24 23:41版はユーザーが基板サイズ・配置を調整した版。添付ERC/DRCは0件。基板製造用Gerberはこの版から新規出力する必要がある。
+
+### 履歴管理
+
+前回の100mm改訂版と16:45の発注履歴は保持。既存の v1/v2(CH32V003) 設計は保存したまま。`main` の統合はユーザーの許可があるまで実施しない。
