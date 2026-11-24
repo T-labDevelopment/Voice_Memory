@@ -1,0 +1,90 @@
+{
+  "source_archive_sha256": "bd1351872f4d337664d0818d76dbb4c1e1650072b96063b2279d5c885837d033",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3380,
+      "sha256": "14181bdfe85ac642c6afadee6f4e7d0a9754bed0a4603578571cc5272f0ae781"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/README.md",
+      "bytes": 1603,
+      "sha256": "41ab1d5f5adef84dbaa7b5c8b0d88ca9789f9dda4260479d3f3a767503254431"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/VoiceMemory_TDisplay.kicad_pcb",
+      "bytes": 717004,
+      "sha256": "a5a5bb4fe3f752385ee3a5c923f650ef401a8979c30e49997811275ad8bd7f7f"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/VoiceMemory_TDisplay.kicad_pro",
+      "bytes": 16777,
+      "sha256": "5278983ea31473d60367c46dd149dec01996ed9a2d5f0eac52dd56e6a70559aa"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/VoiceMemory_TDisplay.kicad_sch",
+      "bytes": 205122,
+      "sha256": "3cb12a475c987339cb1cd60977194a1e6f78df3605b00492eb9bc752e16b06d7"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/VoiceMemory_TDisplay.kicad_sym",
+      "bytes": 4632,
+      "sha256": "ae6d8a58526a683364869a7a13bc13a4f85692242f92df0c8fd5103465fea0cf"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/VoiceMemory_TDisplay.pretty/Relay_Zettler_AZ8462_DIP8.kicad_mod",
+      "bytes": 3496,
+      "sha256": "798a668a55f9f1a7516cc6158f4975b13a02f21f9b51aeab85b61796baa3c0ad"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/VoiceMemory_TDisplay.pretty/SW_PUSH-12mm.kicad_mod",
+      "bytes": 2254,
+      "sha256": "2293e833475e974765992632f68b7fcb4dd18b4534de20cc076b2fc4b8e1e5b0"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/VoiceMemory_TDisplay.pretty/TTGO-T-Display.kicad_mod",
+      "bytes": 4670,
+      "sha256": "b98254e14320fcccfa7c26557fe15f144c42436375d39dfb3bec44fdff531eea"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/Voice_Memory.kicad_sym",
+      "bytes": 22081,
+      "sha256": "7b63b5beaa87fc88e6e14afcb1817ead6903bcd696399c1606cce31a7ee69d5f"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod",
+      "bytes": 5401,
+      "sha256": "7fb278927aa8ec3b0b66ed42ad3556316ad05d5981ad9246b7e93ddc92ee2f01"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/fp-lib-table",
+      "bytes": 309,
+      "sha256": "1912809735bdd3c2525d2baec0f367b9076feb14601da752ca1869d77f29031d"
+    },
+    {
+      "path": "hardware/kicad/voicememory_tdisplay/revA_manufacturing_2026-11-24/sym-lib-table",
+      "bytes": 301,
+      "sha256": "8f8a67020270b727d0fe91498fe57772d028c9361ea529f86460732a6b9a0e08"
+    },
+    {
+      "path": "hardware/source-archives/tdisplay-reva-2026-11-24/VoiceMemory_TDisplay-2026-11-24_161139.zip",
+      "bytes": 200351,
+      "sha256": "bd1351872f4d337664d0818d76dbb4c1e1650072b96063b2279d5c885837d033"
+    },
+    {
+      "path": "releases/esp32-tdisplay-reva-2026-11-24/DRC_2026-11-24_161113.rpt",
+      "bytes": 521,
+      "sha256": "512676a216cbb95563d7ef873aa2fa7482ed907560dbd781c8c56cfdf4edb59d"
+    },
+    {
+      "path": "releases/esp32-tdisplay-reva-2026-11-24/ERC_2026-11-24_161128.rpt",
+      "bytes": 357,
+      "sha256": "1e37ac0fecc1411930d5bf8bbdf6dbad0096c365a16b930a9b58cf465b21dc7c"
+    },
+    {
+      "path": "releases/esp32-tdisplay-reva-2026-11-24/README.md",
+      "bytes": 2755,
+      "sha256": "978cc0f29a5d3a177ecef56c17af2132f77a233f0f3218e5f031ce22afb1694e"
+    }
+  ]
+}

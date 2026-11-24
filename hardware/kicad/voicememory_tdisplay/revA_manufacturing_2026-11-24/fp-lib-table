@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "Voice_Memory")(type "KiCad")(uri "${KIPRJMOD}/Voice_Memory.pretty")(options "")(descr "Voice Memory project footprints"))
+  (lib (name "VoiceMemory_TDisplay")(type "KiCad")(uri "${KIPRJMOD}/VoiceMemory_TDisplay.pretty")(options "")(descr "T-Display module and tact footprints"))
+)
