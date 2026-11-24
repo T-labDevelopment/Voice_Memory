@@ -17,3 +17,7 @@ Name,GPIO,Dir,Net,Notes
 "TFT_BL","4","OUT","ONBOARD","Built-in TFT backlight; all visual indicators on internal LCD"
 "BTN0","0","IN","ONBOARD","Boot strapping"
 "BTN35","35","IN","ONBOARD","onboard button"
+"CH1_SELECT","36","IN","SW_CH1_N","SW2 12mm tact; active LOW; external R23=10k pull-up (input-only GPIO)"
+"CH2_SELECT","37","IN","SW_CH2_N","SW3 12mm tact; active LOW; external R24=10k pull-up (input-only GPIO)"
+"CH3_SELECT","38","IN","SW_CH3_N","SW4 12mm tact; active LOW; external R25=10k pull-up (input-only GPIO)"
+"CH4_SELECT","15","IN","SW_CH4_N","SW5 12mm tact; active LOW; external R26=10k pull-up; LOW at reset disables ROM boot log"

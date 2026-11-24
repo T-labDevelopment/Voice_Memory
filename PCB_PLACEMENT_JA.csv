@@ -40,7 +40,15 @@ R7,Resistor_SMD:R_0805_2012Metric,117.7,66.5,90,F.Cu,Under module,T-Display下/�
 R8,Resistor_SMD:R_0805_2012Metric,117.7,71.8,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
 R9,Resistor_SMD:R_0805_2012Metric,113.8,82.4,90,F.Cu,Under module,T-Display下/ピンヘッダ間; 高さ・実装クリアランス現物要確認
 RV2,Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical,130.6,85.9,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
-SW1,Button_Switch_THT:SW_PUSH_6mm_H4.3mm,131,77.5,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+SW1,VoiceMemory_TDisplay:SW_PUSH-12mm,71.26,102,0,F.Cu,Operator control left of TDisplay,"REC 12mm, active-low, confirm switch type/height"
 U2,VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm,135.3,95.9,0,F.Cu,Outside module,外周
 U3,Package_DIP:DIP-6_W7.62mm,130.7,68.1,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
 U4,Package_DIP:DIP-8_W7.62mm,130.7,56.1,0,F.Cu,Outside module,THT/高背部品はユニット外; コネクタ挿抜要確認
+SW2,VoiceMemory_TDisplay:SW_PUSH-12mm,61.76,67,0,F.Cu,Operator control left of TDisplay,CH1; matching switch model drill/pads unconfirmed
+SW3,VoiceMemory_TDisplay:SW_PUSH-12mm,80.76,67,0,F.Cu,Operator control left of TDisplay,CH2; matching switch model drill/pads unconfirmed
+SW4,VoiceMemory_TDisplay:SW_PUSH-12mm,61.76,84.5,0,F.Cu,Operator control left of TDisplay,CH3; matching switch model drill/pads unconfirmed
+SW5,VoiceMemory_TDisplay:SW_PUSH-12mm,80.76,84.5,0,F.Cu,Operator control left of TDisplay,CH4; matching switch model drill/pads unconfirmed
+R23,Resistor_SMD:R_0805_2012Metric,109.9,87.7,90,F.Cu,Under module,"CH1 pullup; 10k, external 3V3 pullup"
+R24,Resistor_SMD:R_0805_2012Metric,106,93,90,F.Cu,Under module,"CH2 pullup; 10k, external 3V3 pullup"
+R25,Resistor_SMD:R_0805_2012Metric,109.9,93,90,F.Cu,Under module,"CH3 pullup; 10k, external 3V3 pullup"
+R26,Resistor_SMD:R_0805_2012Metric,106,98.3,90,F.Cu,Under module,"CH4 pullup; 10k, external 3V3 pullup"

@@ -1,3 +1,5 @@
+> **改訂情報:** 旧45部品配置案の履歴。5ボタン追加後の現行正本は [BUTTON_CONTROL_SPEC_JA.md](BUTTON_CONTROL_SPEC_JA.md)。
+
 # VoiceMemory_TDisplay ESP32 — コンパクトPCB初期配置（2026-11-24）
 
 対象: アップロードされた `VoiceMemory_TDisplay-2026-11-24_010020.zip` を**変更元の正本**として使用。

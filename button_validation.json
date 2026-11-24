@@ -1,0 +1,117 @@
+{
+  "source_schematic_pins": {
+    "CH1": 36,
+    "CH2": 37,
+    "CH3": 38,
+    "CH4": 15,
+    "REC": 13
+  },
+  "new_parts": 8,
+  "total_parts": 53,
+  "switches": 5,
+  "pullups": 4,
+  "footprint": "VoiceMemory_TDisplay:SW_PUSH-12mm",
+  "board_mm": [
+    56.5,
+    51.8,
+    160.8,
+    116.2
+  ],
+  "board_size_mm": [
+    104.3,
+    64.4
+  ],
+  "switch_courtyards": [
+    {
+      "ref": "SW1",
+      "center": [
+        77.5,
+        104.5
+      ],
+      "footprint_origin": [
+        71.26,
+        102.0
+      ],
+      "courtyard": [
+        69.49,
+        98.25,
+        85.51,
+        110.75
+      ]
+    },
+    {
+      "ref": "SW2",
+      "center": [
+        68.0,
+        69.5
+      ],
+      "footprint_origin": [
+        61.76,
+        67.0
+      ],
+      "courtyard": [
+        59.99,
+        63.25,
+        76.01,
+        75.75
+      ]
+    },
+    {
+      "ref": "SW3",
+      "center": [
+        87.0,
+        69.5
+      ],
+      "footprint_origin": [
+        80.76,
+        67.0
+      ],
+      "courtyard": [
+        78.99,
+        63.25,
+        95.01,
+        75.75
+      ]
+    },
+    {
+      "ref": "SW4",
+      "center": [
+        68.0,
+        87.0
+      ],
+      "footprint_origin": [
+        61.76,
+        84.5
+      ],
+      "courtyard": [
+        59.99,
+        80.75,
+        76.01,
+        93.25
+      ]
+    },
+    {
+      "ref": "SW5",
+      "center": [
+        87.0,
+        87.0
+      ],
+      "footprint_origin": [
+        80.76,
+        84.5
+      ],
+      "courtyard": [
+        78.99,
+        80.75,
+        95.01,
+        93.25
+      ]
+    }
+  ],
+  "source_switch_official_sha": "6e8f066cfacb6b191768e98bb9497655634127f7",
+  "routing": "not started",
+  "kicad10_erc": "not executed",
+  "kicad10_drc": "not executed",
+  "boot_caveat": "GPIO15 LOW during reset disables ROM boot messages; no GPIO12/2 assignment",
+  "mechanical_caveat": "Verify chosen physical 12mm switch pad pinout and drill size; generic KiCad TL1100 geometry may not fit every 12mm part."
+}

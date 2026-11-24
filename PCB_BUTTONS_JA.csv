@@ -1,0 +1,10 @@
+﻿Ref,Function,Net,GPIO,Footprint,CenterX,CenterY,Status
+SW1,REC,SW_REC_N,13,VoiceMemory_TDisplay:SW_PUSH-12mm,77.5,104.5,Replacement 6mm to 12mm
+SW2,CH1_SELECT,SW_CH1_N,36,VoiceMemory_TDisplay:SW_PUSH-12mm,68.0,69.5,Added dedicated button
+R23,10k pullup,SW_CH1_N,36,Resistor_SMD:R_0805_2012Metric,109.9,87.7,Added
+SW3,CH2_SELECT,SW_CH2_N,37,VoiceMemory_TDisplay:SW_PUSH-12mm,87.0,69.5,Added dedicated button
+R24,10k pullup,SW_CH2_N,37,Resistor_SMD:R_0805_2012Metric,106.0,93.0,Added
+SW4,CH3_SELECT,SW_CH3_N,38,VoiceMemory_TDisplay:SW_PUSH-12mm,68.0,87.0,Added dedicated button
+R25,10k pullup,SW_CH3_N,38,Resistor_SMD:R_0805_2012Metric,109.9,93.0,Added
+SW5,CH4_SELECT,SW_CH4_N,15,VoiceMemory_TDisplay:SW_PUSH-12mm,87.0,87.0,Added dedicated button
+R26,10k pullup,SW_CH4_N,15,Resistor_SMD:R_0805_2012Metric,106.0,98.3,Added
