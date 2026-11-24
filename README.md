@@ -10,6 +10,6 @@
 
 **発注用Gerber正本：** [PCB(2).zip](hardware/source-archives/tdisplay-order-candidate-2026-11-25/PCB(2).zip)（SHA-256は[検査記録](releases/esp32-tdisplay-orderfiles-check-2026-11-25/GERBER_MANIFEST_2026-11-25.json)に記載）。前に受領した `PCB(1).zip` は空であり**使用禁止**。
 
-この登録はユーザー指定の発注ファイルを特定する記録です。JLCPCBへの実注文の実行・受注確認を意味しません。基板認識寸法はGerberジョブファイル上80.06×100.05mmであり、見積価格・CAM外形・取付穴は注文画面で確認してください。
+**ユーザー申告：PCB厚1.2mmで発注済み（2026-11-25）。** 注文番号・メーカー側の受注確定画面は未照合です。KiCad設計ファイルやGerberそのものの厚み設定は変更していません。基板認識寸法はGerberジョブファイル上80.06×100.05mmであり、見積価格・CAM外形・取付穴は注文画面で確認してください。
 
 Git作業ブランチで管理し、`main`へは指示なく統合しません。
