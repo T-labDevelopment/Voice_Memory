@@ -1,0 +1,46 @@
+{
+  "project": "VoiceMemory_TDisplay",
+  "board_revision": "Rev.A",
+  "role": "Gerber order-source designated by user",
+  "gerber_file": "PCB(2).zip",
+  "size_bytes": 142509,
+  "sha256": "9706d5f17e36e60b10707433352e0c9b2581442dd265960f3a0328961461c91d",
+  "generation_software": "KiCad Pcbnew 10.0.6",
+  "creation_time": "2026-11-25T00:46:41+09:00",
+  "layers": [
+    "F_Cu",
+    "B_Cu",
+    "F_Mask",
+    "B_Mask",
+    "F_Silkscreen",
+    "B_Silkscreen",
+    "F_Paste",
+    "B_Paste",
+    "Edge_Cuts"
+  ],
+  "drills": [
+    "PTH",
+    "NPTH"
+  ],
+  "profile_centerline_mm": {
+    "x": 80.01,
+    "y": 100
+  },
+  "gerber_job_size_mm": {
+    "x": 80.06,
+    "y": 100.05
+  },
+  "drill_counts": {
+    "PTH": 193,
+    "NPTH": 8
+  },
+  "pth_vias_0_3mm": 96,
+  "npth_mount_holes_4_3mm": 4,
+  "status": "Designated for order; checkout/submission not confirmed",
+  "prior_empty_gerber": "PCB(1).zip — rejected",
+  "caveats": [
+    "CAM outline closure endpoint gaps ~0.005..0.010 mm",
+    "Confirm JLCPCB detected size and pricing",
+    "No new KiCad ERC/DRC run for the uploaded Gerber"
+  ]
+}
