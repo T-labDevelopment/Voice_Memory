@@ -41,7 +41,7 @@ PCBはまだ作っていない。KiCadの基板エディタで新規基板を作
 - U3 = Toshiba TLP592A(F)（PhotoMOS、自動PTT）。
 - U2 = Winbond W25Q32RVCSJM（32Mbit、SPI Flash；4メモリに録音データ保存）。
 - U4 = MCP6002（録音用アンプ、再生用バッファ）。
-- 追加RECスイッチSW1は現時点の回路では存在（内蔵2ボタンだけでは操作割当未確定）。インジケーター用の部品ではない。
+- 操作用12mm角タクトSW1～SW5を必須搭載する（SW1＝REC、SW2～SW5＝CH1～CH4）。内蔵2ボタンだけではチャンネル選択を代用しない。R23～R26各10kΩを追設。詳細は [BUTTON_CONTROL_SPEC_JA.md](BUTTON_CONTROL_SPEC_JA.md)。
 - 電源はT-DisplayのUSB-Cまたは指定1セルLiPo。旧3×単3をLiPo端子へ直接接続しない。
 
 ## 3. リレーK1の電気的動作
@@ -64,7 +64,7 @@ K1コイルは1=+3V3、12=Q1コレクタ。D1はカソード=+3V3、アノード
 
 - GPIO21=FLASH_MOSI／GPIO22=FLASH_SCK／GPIO17=FLASH_CS／GPIO27=FLASH_MISO
 - GPIO32=AUDIO_ADC／GPIO25=AUDIO_DAC
-- GPIO33=RELAY_EN／GPIO26=AUTO_PTT_EN／GPIO39=PTT_SENSE_HIGH／GPIO13=SW_REC_N
+- GPIO33=RELAY_EN／GPIO26=AUTO_PTT_EN／GPIO39=PTT_SENSE_HIGH／GPIO13=SW_REC_N／GPIO36=CH1／GPIO37=CH2／GPIO38=CH3／GPIO15=CH4
 - TFT専用：GPIO19/18/5/16/23/4。内蔵ボタン：GPIO0/35。
 - **重要な訂正：** 初期ドラフトのT-Displayカスタムシンボルの端子番号は基板フットプリントのメーカー表記と逆順だったため、番号を `新番号 = 25 - 旧番号` で対応づけた。GPIOネットと物理端子接続位置は維持し、端子番号だけ正規に合わせた。
 - LILYGO公式KiCad `TTGO-T-Display.kicad_mod`（原本をそのまま使用）に対応するパッドの電気名は `tdisplay_header_pinmap.csv` に記載。基板リビジョンごとの現物印字を確認すること。
