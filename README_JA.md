@@ -1,5 +1,7 @@
 # VoiceMemory_TDisplay_ESP32 Rev.A｜LILYGO T-Display簡易回路設計
 
+**Rev.A 12mm×5 physical control update:** [BUTTON_CONTROL_SPEC_JA.md](BUTTON_CONTROL_SPEC_JA.md)
+
 > **U2のERC警告・再修正（2026-11-24）:** 前回指定の`Package_SO:SOIC-8_5.23x5.23mm_P1.27mm`は、ユーザーのKiCad 10ライブラリにも存在せず警告が残りました。**今回はKiCad公式の完全な8パッドフットプリントをプロジェクト内の`VoiceMemory_TDisplay.pretty`へ同梱**し、U2の指定を`VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm`に修正。KiCadのグローバルライブラリ収録状況に依存しない構成です。ユーザーKiCad 10でのERC再実行は未実施。[詳細](ERC_U2_FOOTPRINT_FIX_JA.md)。
 
 > **回路全体・部品追加削除の再監査（2026-11-23）：** [CIRCUIT_COMPONENT_AUDIT_JA.md](CIRCUIT_COMPONENT_AUDIT_JA.md) と [COMPONENT_CHANGE_REVIEW.csv](COMPONENT_CHANGE_REVIEW.csv) を追加しました。無条件の削除部品はなし。MIC_AUDIO経由で給電するエレクトレットマイクは録音時にバイアス喪失の恐れがあります。R6/R7の録音増幅率約5.68倍とR18によるPTT_GND共通化も実機確認が必要です。部品追加は対象マイク・無線機条件確定後に限定し、回路図・BOMは今回は無変更です。
@@ -32,7 +34,7 @@
 - 4チャンネルM1～M4、録音最大120秒、8kHz/8bit/モノラル、ループ再生、自動PTT、手動PTT優先を維持する。
 - マイク・無線機は旧仕様のRJ45 8P8C×2（J1/J2）を維持する。メーカー別ピン割当は外付け変換ケーブルで対応する。
 - 制御部は **初代／Classic LILYGO T-Display、ESP32、1.14インチST7789**。T-Display S3とは端子構成が異なるので混用しない。
-- 旧CH32V003と専用書込みヘッダ、独立表示LEDを廃止。T-Display標準のUSB-C、液晶と2つのボタンを利用する。
+- 旧CH32V003と専用書込みヘッダ、独立表示LEDを廃止。T-Display標準のUSB-C・内蔵TFTを使用し、**外付け12mm角タクトSW1～SW5（REC＋CH1～CH4）を必須の物理操作部として搭載**する。内蔵GPIO0/35の2ボタンは補助操作用とする。
 - 音声再生はESP32内蔵8bit DAC（GPIO25）で生成し、旧PWM出力フィルタを簡略化する。録音はADC1 GPIO32、前段はMCP6002。
 - 記録容量は外付けW25Q32RVCSJM（32Mbit/4MiB）を維持。T-Display上の4MiBプログラムFlashを4メモリ分の録音領域として共用する設計にはしない。
 - K1=AZ8462-3（3Vコイル、2回路c接点）、U3=TLP592A（自動PTT）の誤送信防止構成は維持。電源はT-DisplayのUSB-Cまたはメーカー仕様に沿った1セルLiPo、外付け回路は3.3V給電。旧単3×3本をLiPo端子に直結しない。
@@ -83,9 +85,14 @@ U3の内部入力LED（ネット `PTT_LED_A`）は**PTT制御用の光結合素�
 | 33 | `RELAY_EN` | Q1経由でK1を駆動 |
 | 26 | `AUTO_PTT_EN` | R13経由でTLP592A入力LEDを駆動 |
 | 39 | `PTT_SENSE_HIGH` | Q2コレクタ、HIGH=押下 |
-| 13 | `SW_REC_N` | 外付けRECボタンSW1、LOW=押下 |
+| 13 | `SW_REC_N` | **SW1＝12mm角録音ボタン**、LOW=押下 |
+| 36 | `SW_CH1_N` | SW2＝CH1、外付け10kΩプルアップR23、押下LOW |
+| 37 | `SW_CH2_N` | SW3＝CH2、外付け10kΩプルアップR24、押下LOW |
+| 38 | `SW_CH3_N` | SW4＝CH3、外付け10kΩプルアップR25、押下LOW |
+| 15 | `SW_CH4_N` | SW5＝CH4、外付け10kΩプルアップR26、押下LOW。起動時ストラップに注意 |
+
 | 0 | 本体ボタン | 再生／停止／ループ選択の提案。起動時BOOT兼用 |
-| 35 | 本体ボタン | M1～M4選択の提案 |
+| 35 | 本体ボタン | 補助操作用。メモリ選択は独立SW2～SW5を優先 |
 | 4/5/16/18/19/23 | LCD関連 | T-Display内蔵LCD専用 |
 
 ESP32のSPI信号はピンマトリクスで割当可能。ESP32 ADC1を選んでいるため、Wi-Fi利用時のADC2共用問題を避ける。液晶と同時動作したときのADCノイズとDAC歪みは実機で評価する。
