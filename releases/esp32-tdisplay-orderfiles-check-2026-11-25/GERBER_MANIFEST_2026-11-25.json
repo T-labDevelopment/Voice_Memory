@@ -40,10 +40,26 @@
   "prior_empty_gerber": "PCB(1).zip — rejected",
   "caveats": [
     "CAM outline closure endpoint gaps ~0.005..0.010 mm",
-    "Confirm JLCPCB detected size and pricing",
     "No new KiCad ERC/DRC run for the uploaded Gerber",
-    "1.2 mm thickness is an order option; Gerber source and KiCad native board stackup were not modified"
+    "1.2 mm thickness is an order option; Gerber source and KiCad native board stackup were not modified",
+    "JLCPCB payment screenshot confirms $2 PCB special price; CAM outline approval is not independently confirmed"
   ],
   "board_thickness_ordered_mm": 1.2,
-  "order_status": "User reported PCB ordered with 1.2 mm thickness on 2026-11-25; vendor receipt not independently verified"
+  "order_status": "JLCPCB screenshot confirms payment completed and Review stage as of 2026-11-25 00:56:43 JST; production start not confirmed",
+  "order_evidence": {
+    "source": "User-provided JLCPCB order list screenshot, 2026-11-25",
+    "order_time_jst": "2026-11-25T00:56:43+09:00",
+    "payment_status_japanese": "支払い済み",
+    "manufacturing_stage_japanese": "レビュー",
+    "quantity_pcs": 5,
+    "product": "PCB prototype",
+    "board_color": "blue",
+    "board_price_usd": 2,
+    "shipping_usd": 1,
+    "paid_total_usd": 3,
+    "build_time_display": "3 days",
+    "thickness_mm": 1.2,
+    "thickness_verification": "User-specified order condition; not shown in screenshot",
+    "order_id_policy": "Not published in public GitHub repository"
+  }
 }
