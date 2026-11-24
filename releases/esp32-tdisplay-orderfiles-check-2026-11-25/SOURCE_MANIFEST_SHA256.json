@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-25",
+  "status": "BLOCKED_EMPTY_GERBER_ZIP",
+  "source_zip": {
+    "name": "VoiceMemory_TDisplay-2026-11-25_003943.zip",
+    "sha256": "f7561826441107d77bcbede8634250e86420abd37bfc5c8dd7e0980d2499f99b",
+    "bytes": 197763
+  },
+  "provided_gerber_zip": {
+    "name": "PCB(1).zip",
+    "sha256": "1b0fab823ef494fb4b6773a5543d18edae409b46926277e078734c0ef9766a27",
+    "bytes": 162,
+    "entries": [
+      "PCB/"
+    ],
+    "gerber_count": 0,
+    "drill_count": 0
+  },
+  "pcb": {
+    "sha256": "cdc1c3ae127afdc9ae8289909434e1a703884cc81790e9e227de7770c8d0fdbd",
+    "bytes": 711463,
+    "width_mm": 80.01,
+    "height_mm": 100.0,
+    "layers": 2,
+    "thickness_mm": 1.6
+  },
+  "latest_erc_drc_reports": "not attached for this revision"
+}
