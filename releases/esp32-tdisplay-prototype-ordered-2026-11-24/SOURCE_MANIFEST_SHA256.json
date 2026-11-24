@@ -1,0 +1,70 @@
+{
+  "record": "VoiceMemory_TDisplay ESP32 Rev.A Prototype ordered manufacturing snapshot",
+  "status": "user-reported ordered for PCB fabrication; immutable order basis; bench validation pending",
+  "date": "2026-11-24",
+  "version_mark_on_silkscreen": "Vir0.5β",
+  "base_approved_snapshot": {
+    "file": "VoiceMemory_TDisplay-2026-11-24_161139.zip",
+    "sha256": "bd1351872f4d337664d0818d76dbb4c1e1650072b96063b2279d5c885837d033"
+  },
+  "ordered_editable_source": {
+    "file": "VoiceMemory_TDisplay-2026-11-24_164508.zip",
+    "sha256": "f81d32c1ff5159133aed2fd2ecadfa6d76ce97ed69fa2263f3d4d98e78146a19"
+  },
+  "submitted_gerber_drill": {
+    "file": "PCB.zip",
+    "sha256": "687c858ae40807e0d26217c01bddc3cf3bbf9370301716aae13c61c121ad7811"
+  },
+  "source_project_files_sha256": {
+    "VoiceMemory_TDisplay.pretty/Relay_Zettler_AZ8462_DIP8.kicad_mod": "798a668a55f9f1a7516cc6158f4975b13a02f21f9b51aeab85b61796baa3c0ad",
+    "VoiceMemory_TDisplay.pretty/SW_PUSH-12mm.kicad_mod": "2293e833475e974765992632f68b7fcb4dd18b4534de20cc076b2fc4b8e1e5b0",
+    "VoiceMemory_TDisplay.pretty/TTGO-T-Display.kicad_mod": "b98254e14320fcccfa7c26557fe15f144c42436375d39dfb3bec44fdff531eea",
+    "Voice_Memory.pretty/RJ45_8P8C_THT_15.91x15.10.kicad_mod": "7fb278927aa8ec3b0b66ed42ad3556316ad05d5981ad9246b7e93ddc92ee2f01",
+    "fp-lib-table": "1912809735bdd3c2525d2baec0f367b9076feb14601da752ca1869d77f29031d",
+    "sym-lib-table": "8f8a67020270b727d0fe91498fe57772d028c9361ea529f86460732a6b9a0e08",
+    "VoiceMemory_TDisplay.kicad_pcb": "354266fa8acd6e5f8e7a0d5ca8d034fa470eaf4f5ff70bef1d8fb092f5162142",
+    "VoiceMemory_TDisplay.kicad_pro": "5278983ea31473d60367c46dd149dec01996ed9a2d5f0eac52dd56e6a70559aa",
+    "VoiceMemory_TDisplay.kicad_sch": "3cb12a475c987339cb1cd60977194a1e6f78df3605b00492eb9bc752e16b06d7",
+    "VoiceMemory_TDisplay.kicad_sym": "ae6d8a58526a683364869a7a13bc13a4f85692242f92df0c8fd5103465fea0cf",
+    "Voice_Memory.kicad_sym": "7b63b5beaa87fc88e6e14afcb1817ead6903bcd696399c1606cce31a7ee69d5f"
+  },
+  "generation": {
+    "GenerationSoftware": {
+      "Vendor": "KiCad",
+      "Application": "Pcbnew",
+      "Version": "10.0.6"
+    },
+    "CreationDate": "2026-11-24T16:46:23+09:00"
+  },
+  "general_specs": {
+    "ProjectId": {
+      "Name": "VoiceMemory_TDisplay",
+      "GUID": "566f6963-654d-4656-9d6f-72795f544469",
+      "Revision": "rev?"
+    },
+    "Size": {
+      "X": 64.45,
+      "Y": 104.35
+    },
+    "LayerNumber": 2,
+    "BoardThickness": 1.6,
+    "Finish": "None"
+  },
+  "differences_from_161139": [
+    "PCB only: R27 moved from (90.805,100.330) to (90.805,98.806) mm",
+    "SW_WAKE_N and +3V3 tracks rerouted around R27",
+    "F.SilkS prototype identification and B.SilkS PTT_GND/GND_AUD note added",
+    "minor silk component annotations and copper zone refill; PCB 52 footprints, 101 vias",
+    "KiCad .kicad_prl GUI-local preference change only; excluded from tracked editable files"
+  ],
+  "validation": {
+    "2026-11-24_161139": "previous ERC=0 DRC=0 from user supplied reports, with rule exclusions",
+    "prototype_164508": "not accompanied by a new ERC/DRC report; not verified as zero independently",
+    "gerber_vs_pcb": "not regenerated or fully geometrically compared; association is user submitted matching order files"
+  },
+  "raw_sha256": {
+    "hardware/kicad/voicememory_tdisplay/prototype_ordered_2026-11-24/VoiceMemory_TDisplay.kicad_pcb": "354266fa8acd6e5f8e7a0d5ca8d034fa470eaf4f5ff70bef1d8fb092f5162142",
+    "hardware/source-archives/tdisplay-prototype-ordered-2026-11-24/VoiceMemory_TDisplay-2026-11-24_164508.zip": "f81d32c1ff5159133aed2fd2ecadfa6d76ce97ed69fa2263f3d4d98e78146a19",
+    "hardware/source-archives/tdisplay-prototype-ordered-2026-11-24/PCB.zip": "687c858ae40807e0d26217c01bddc3cf3bbf9370301716aae13c61c121ad7811"
+  }
+}

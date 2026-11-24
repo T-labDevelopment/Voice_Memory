@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "Voice_Memory")(type "KiCad")(uri "${KIPRJMOD}/Voice_Memory.kicad_sym")(options "")(descr "Voice Memory project symbols"))
+  (lib (name "VoiceMemory_TDisplay")(type "KiCad")(uri "${KIPRJMOD}/VoiceMemory_TDisplay.kicad_sym")(options "")(descr "T-Display module symbols"))
+)
