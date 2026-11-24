@@ -1,5 +1,7 @@
 # VoiceMemory v3 T-Display ESP32 / Simplified Schematic Draft
 
+**Rev.A 12mm×5 physical control update:** [BUTTON_CONTROL_SPEC_JA.md](BUTTON_CONTROL_SPEC_JA.md)
+
 > **U2 KiCad ERC warning rework (2026-11-24):** Both previously tried `Package_SO` names failed to resolve in the user's KiCad 10 installation. The complete official 8-pad KiCad footprint is now included in the project-local `VoiceMemory_TDisplay.pretty` library. U2 uses `VoiceMemory_TDisplay:SOIC-8_5.23x5.23mm_P1.27mm` in schematic, symbol and BOM. This no longer relies on the global `Package_SO` library, but on-machine KiCad 10 ERC verification is still pending. See [ERC_U2_FOOTPRINT_FIX_JA.md](ERC_U2_FOOTPRINT_FIX_JA.md).
 
 > **Whole-circuit component audit (2026-11-23):** Added [CIRCUIT_COMPONENT_AUDIT_JA.md](CIRCUIT_COMPONENT_AUDIT_JA.md) and [COMPONENT_CHANGE_REVIEW.csv](COMPONENT_CHANGE_REVIEW.csv). No unconditional removals. An audio-line-biased electret microphone loses its DC bias while K1 isolates the radio during recording. Recording gain is ~5.68; R18 bridges PTT and circuit grounds. These are conditional design risks requiring hardware/radio-specific tests. No changes to the schematic, BOM or footprints on this audit branch.
@@ -21,7 +23,7 @@ This v3 project is independent. **Do not alter the approved v2 files or its sour
 
 ## Design intent
 - Keep four memory channels M1..M4, microphone-PTT-controlled recording, variable recording length capped at 120s, single and looped playback, automatic PTT, default pass-through and protection from accidental TX during recording.
-- T-Display classical ESP32 (NOT T-Display S3). Integrated ST7789 display and two buttons GPIO0 / GPIO35. Optional external REC ARM switch SW1.
+- T-Display classic ESP32 (NOT T-Display S3) with integrated ST7789 TFT. **Five mandatory 12mm tactile switches:** SW2–SW5 direct CH1–CH4 select and SW1 record. Onboard GPIO0/35 buttons remain available for auxiliary actions.
 - 8kHz / unsigned 8-bit / mono PCM. External W25Q32RVCSJM 32Mbit (4MiB) standard SPI, 4x120s raw PCM requires 3,840,000 bytes plus metadata. Internal 4MB module Flash cannot simultaneously guarantee this capacity and firmware.
 - GPIO32 ADC1 with MCP6002 audio front-end; GPIO25 ESP32 DAC1 plus 2-pole RC low-pass and MCP6002 follower. No PWM audio output circuitry.
 - Power and firmware via the T-Display onboard USB-C or its documented 1S LiPo input. **Never connect AA3 battery to the T-Display 1S LiPo input.** Analog and relay circuitry powered from board `+3V3`, current limit / LDO temp / battery droop must be assessed.
@@ -45,7 +47,12 @@ This v3 project is independent. **Do not alter the approved v2 files or its sour
 | RELAY_EN | 33 | Q1 via 820ohm R11, 100k pulldown |
 | AUTO_PTT_EN | 26 | U3 LED via 330ohm R13, 100k pulldown |
 | PTT_SENSE_HIGH | 39 | Q2 collector via 10k to 3V3; **HIGH = manual PTT pressed** |
-| SW_REC_N | 13 | Optional switch SW1 to ground + 10k pull-up |
+| SW_REC_N | 13 | SW1 dedicated 12mm REC switch to ground + R19 10k pull-up |
+| SW_CH1_N | 36 | SW2 12mm tact; active-low; R23 10k to 3V3 (input-only GPIO) |
+| SW_CH2_N | 37 | SW3 12mm tact; active-low; R24 10k to 3V3 (input-only GPIO) |
+| SW_CH3_N | 38 | SW4 12mm tact; active-low; R25 10k to 3V3 (input-only GPIO) |
+| SW_CH4_N | 15 | SW5 12mm tact; active-low; R26 10k to 3V3 (strap pin MTDO) |
+
 | Display | 4,5,16,18,19,23 | onboard only |
 | UI buttons | 0,35 | onboard; GPIO0 is BOOT strap, do not hold during boot |
 | Not used | 2,12,15,36,37,38 | no-connect by design; avoid risky strapping pins |
@@ -64,7 +71,7 @@ This v3 project is independent. **Do not alter the approved v2 files or its sour
 - **D1 flyback**: diode pin1 (K) to `+3V3`, pin2 (A) to `RELAY_COIL_LOW`. Logical polarity statically checked. Physical device and K1 footprint pinout still require validation.
 
 ## Firmware proposal
-- Use on-board button GPIO35 short press to cycle M1..M4; onboard GPIO0 short press play/stop; long press toggles loop. SW1 arms recording, and physical microphone PTT controls record time. The UI is a proposal, firmware not implemented by this schematic.
+- SW2–SW5 are mandatory physical **direct** CH1–CH4 selectors; SW1 is the dedicated 12mm record control and microphone PTT controls actual recording time. Onboard GPIO0/35 may be assigned auxiliary playback/stop/loop functions by firmware. Button long-press/simultaneous-press behavior is not yet defined; firmware is not implemented.
 - Sample 8kHz mono; use DMA / buffered ADC and DAC where supported by the chosen stable ESP32 Arduino Core or ESP-IDF; do not couple audio sample timing to TFT redraws. ADC1 chosen because ADC2 conflicts with Wi-Fi; RF noises remain a test issue.
 - Flash sector layout: 64KiB metadata/reserved plus four slots of 1,032,192 bytes each, raw max record length 960,000 bytes per slot, remainder free. Mark validity only after PTT release and completed metadata commit. Implement erase-before-write and power-loss recovery.
 - Boot GPIO26 AUTO_PTT_EN LOW, GPIO33 RELAY_EN LOW, GPIO17 FLASH_CS HIGH before other tasks; default no continuous transmit.
