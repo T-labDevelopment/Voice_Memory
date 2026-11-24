@@ -12,7 +12,10 @@
 | 管理上の名称 | Voice_Memory / CH32V003版 | VoiceMemory_TDisplay_ESP32 |
 | MCU | CH32V003F4P6 | LILYGO T-Display（初代ESP32） |
 | 制御ファーム | CH32用、既存版を維持 | ESP32用、独立実装 |
-| LCD／操作 | 既存試作仕様 | T-Display標準LCD＋ボタン、別途REC操作 |
+| LCD／操作 | 既存試作仕様 | T-Display内蔵TFT＋**12mm角タクトSW1～SW5（REC、CH1～CH4）**＋内蔵補助ボタン |
+- 操作系は**CH1～CH4用の専用12mm角タクト4個＋REC用12mm角タクト1個＝計5個**を必須構成とする。GPIO36/37/38/15へCH選択を割り当て、GPIO13をREC用として維持。R23～R26各10kΩプルアップを追加。GPIO15はMTDO起動ストラップのため、押下リセット時のログ抑止に注意する。
+- 基板外形の初期配置は104.3×64.4mm。スイッチ5個はT-Display左側に配置し、追加抵抗4個はT-Display下の実装空間へ配置。**未配線、ERC/DRCと実機スイッチ確認は未実施**。詳細は [BUTTON_CONTROL_SPEC_JA.md](BUTTON_CONTROL_SPEC_JA.md)。
+
 | 録音保存 | 外付けSPI Flash 4MiB | 外付けSPI Flash 4MiB（共通要求のみ踏襲） |
 | 音声録再 | CH32系既存方式 | ESP32 ADC1＋内蔵DACとMCP6002 |
 | 手動PTT・音声切替 | 既存リレー回路 | AZ8462-3 2c機械式リレー継続採用 |
