@@ -1,5 +1,7 @@
 # T-Display内蔵TFT表示仕様 — VoiceMemory_TDisplay_ESP32 Rev.A
 
+**Rev.A 12mm×5 physical control update:** [BUTTON_CONTROL_SPEC_JA.md](BUTTON_CONTROL_SPEC_JA.md)
+
 - 文書種別：ファームウェア実装用の表示仕様書（編集可能なMarkdown）
 - 適用対象：**T-Display ESP32専用プロジェクト**。CH32V003既存試作版への適用は禁止。
 - 基準設計：`VoiceMemory_TDisplay.kicad_sch`、`pinmap.csv`、`PROJECT_SCOPE_JA.md`
@@ -69,7 +71,7 @@
 - 背景処理でTFTのみが停止した場合、PTT安全機能が正常であると誤認して表示を続けない。
 - リレー切替時の状態表示は、切替命令が出た時点で表記可能だが、物理的接点の動作完了は測定していない。必要ならソフトウェアの安定待ち時間を別途設定する。
 - 内蔵TFT用の標準GPIO以外に外付けインジケーター線を割り当てない。
-- 内蔵ボタンGPIO0/35と外付けSW1 GPIO13の現行操作回路は、**表示統合のみを理由に変更しない**。操作の最終割当はファームウェア設計で定義する。
+- **4CH専用12mm角SW2～SW5と12mm角REC用SW1を備える**。内蔵ボタンGPIO0/35は補助操作に利用できるが、メモリ選択はSW2～SW5の直接入力を優先する。入力のチャタリング処理・長押し等の詳細はファームウェアで定義する。
 
 ## 5. 実施・未実施
 
